@@ -30,27 +30,22 @@
     
     <title>Inicio - Caporale Salón</title>
 </head>
+<div id="alls">
 <body>
 
     <!----------Menu----------->
-    <header>
-        <div class="header-content">
-
+    <header id="header" class="header">
+        <div class="header-content"><div class="header-bar">
+            
             <div class="logo-caporale">
                 <img src="img/logo-menu.png" alt="">
             </div>
-
-            <div class="reserve-menu" id="reserve-menu-id">
-                <i class="fa-regular fa-calendar-check"></i>
-                <h1 class="reserve-h1-big">¡Reservá tu cita aqui!</h1>
-                <h1 class="reserve-h1-small">Reservá tu cita</h1>
             </div>
-
             <div class="menu" id="show-menu">
                 <nav>
                     <ul>
                         <li><a class = "desplazar" href="">Inicio</a></li>
-                        <li><a class = "" href="">Servicios</a></li>
+                        <li><a id="service-menu-option" class = "desplazar" href="#service">Servicios</a></li>
                         <li><a class = "" href="">Reservá tu cita</a></li>
                         <li><a class = "desplazar" href="">Ubicación</a></li>
                         <li><a class = "desplazar" href="">Contacto</a></li>
@@ -65,12 +60,20 @@
 
     </header>
 
+
+
     <div id="icon-menu">
         <i class="fa-solid fa-bars"></i>
     </div>
 
     <div id="icon-menu-active">
         <i class="fa-solid fa-xmark"></i>
+    </div>
+
+    <div class="reserve-menu" id="reserve-menu-id">
+        <i class="fa-regular fa-calendar-check"></i>
+        <h1 class="reserve-h1-big">¡Reservá tu cita aqui!</h1>
+        <h1 class="reserve-h1-small">Reservá tu cita</h1>
     </div>
 
 <!-----------------------Contenido-------------------->
@@ -90,12 +93,12 @@
 
     <section class="section-service">
         <div id="service">
-            <a href="service-content-id" id="service-link"><div id="service-button">
+            <a class="desplazar" href="#service" id="service-but"><div id="service-button">
                 <h1>Servicios</h1>
                 <div class="i-div"><i class="fa-solid fa-angles-down"></i></div>
             </div></a>
 
-            <article id="service-content-id" class="service-content">
+            <article class="service-content" id="service-content-id">
                 
                 <div class="service-content-imgs">
                     <div class="service-content-imgs-int">
@@ -114,9 +117,20 @@
 
     </section>
 
+    <section class="section-ubication">
+        <h1 id="section-ubication-h1-1">Consula el mapa para saber donde nos encontramos</h1>
+        <div id="container-ubicacion-map"></div>
+        <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+        integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+        crossorigin=""></script>   
+        <script src="js/map.js"></script>
+        <h1>Leandro Gomez 871, Paysandú Uruguay</h1>
+    </section>
+
 </div>
 
     <script src="js/js-main.js"></script>
 
 </body>
+</div>
 </html>
