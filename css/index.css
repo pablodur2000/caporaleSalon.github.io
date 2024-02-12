@@ -80,6 +80,8 @@
 
 #service-button h1{
     font-size: 35px;
+    color: rgb(15,15,15);
+    font-family: 'Mukta', sans-serif;
 }
 
 .service-content {
