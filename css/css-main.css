@@ -1,0 +1,348 @@
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    font-family: sans-serif;
+}
+
+html{
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+body{
+    background-color: rgb(15, 15, 15);
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+.all{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    transform: translateX(0);
+    animation: slideRight 1s cubic-bezier(1, 0, 0, 1) forwards;
+}
+
+.all-active {
+    
+    animation: slideLeft 1s ease forwards;
+}
+
+.all-inactive {
+    animation: slideRight 0.5s ease forwards;
+}
+
+@keyframes slideLeft {
+    from {
+        transform: translateX(0);
+        padding-left: 0;
+    }
+    to {
+        padding-left: 300px;
+        transform: translateX(-300px) /* o el valor deseado */
+    }
+}
+
+@keyframes slideRight {
+    from {
+        padding-left: 300px;
+        transform: translateX(-300px)
+    }
+    to {
+        transform: translateX(0);
+        padding-left: 0;
+    }
+}
+
+
+
+/*------------------------------Header - Menú------------------------------*/
+
+header{
+    position: block;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 80px;
+    background: rgb(255, 255, 255);
+    box-shadow: 0 15px 20px -22px black;  
+    z-index: 10;
+}
+
+.header-content{
+    max-width: 100%;
+    max-height: 100%;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo-caporale img{
+    width: 200px;
+    margin-left: 10px;
+    margin-top: 5px;
+}
+
+.reserve-menu{
+    position: fixed;
+    right: 100px;
+    z-index: 100;
+    background-color: rgb(15, 15, 15);
+    border-radius: 50px;
+    padding: 10px;
+    padding-left: 0;
+    height: 50px;
+    top: 15px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    cursor: pointer;
+    padding: 0 15px;
+    transition: color 500ms, background 600ms, transform 800ms;
+    animation: slideIn 1.5s alternate forwards;
+}
+
+.reserve-menu-off{
+    animation: slideOut1 3s alternate forwards;
+}
+
+@keyframes slideOut1{
+    from{
+        opacity: 1;
+        transform: translateX(0)
+    }
+    to{
+        opacity: 0;
+        transform: translateX(-1000px);
+    }
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateX(-1000px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.reserve-menu:hover{
+    background: rgb(255, 255, 255);
+    border: 3px solid black;
+    box-sizing: border-box;
+    transform: scale(1.015);
+}
+
+.reserve-menu i{
+    color: rgb(143, 142, 142);
+    padding: 5px;
+    font-size: 26px;
+    margin-right: 5px;
+    animation: moveIcon 2s infinite alternate forwards;
+}
+
+.reserve-menu h1{
+    font-size: 25px;
+    color: azure;
+    font-family: 'Mukta', sans-serif;
+    transition: color 500ms;
+}
+
+.reserve-h1-small{
+    display: none;
+    
+}
+
+.reserve-menu h1:hover{
+    color: rgb(15, 15, 15);
+}
+
+@keyframes moveIcon {
+    0% {
+        color: rgb(255, 255, 255);
+    }
+    100%{
+        color: rgb(15, 15, 15);
+        filter: drop-shadow(1px 5px 8px #ffffff);
+    }
+}
+
+.menu{
+    position: fixed;
+    height: 100vh;
+    width: 300px;
+    overflow: hidden;
+    top: 0;
+    right: 0;
+    transform: translateX(100%);
+    transition: all 700ms cubic-bezier(0.215, 0.610, 0.355, 1);
+    background-image: url('../img/background-menu.jpg'); /* Ruta de la imagen de fondo */
+    background-size: 200%; /* Ajusta la imagen de fondo para cubrir todo el contenedor */
+    background-position: center; /* Centra la imagen de fondo */
+    background-position-y: 0;
+    z-index: 100;
+    overflow-y: auto;
+    padding-top: 60px;
+    
+}
+
+.menu nav{
+    height: 100%;
+}
+
+.menu nav ul{
+    height: 100%;
+    display: flex;
+    list-style: none;
+    flex-direction: column;
+    align-items: center;
+}
+
+.menu nav ul li{
+    height: 60px;
+    display: flex;
+    margin: 0 10px;
+    align-items: center;
+
+    transition: all 100ms;
+}
+
+
+
+.menu nav ul li a{
+    color: rgb(15, 15, 15);
+    font-family: 'Protest Strike', sans-serif;
+
+    font-size: 20px;
+    text-shadow: 2px 1px 2px rgba(0, 0, 0, 0.226);
+    transition: all 300ms; 
+}
+
+.menu nav ul li a:hover{
+    transform: scale(1.1);
+}
+
+#icon-menu{
+    width: 60px;
+    height: 60px;
+    position: fixed;
+    right: 20px;
+    top: 10px;
+    font-size: 25px;
+    background: rgb(15, 15, 15);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+    transition: color 500ms, background 600ms, transform 400ms;
+    z-index: 1000;
+}
+
+#icon-menu:hover{
+    background: rgb(255, 255, 255);
+    color: rgb(15, 15, 15);
+    border: 3px solid black;
+    box-sizing: border-box;
+    transform: scale(1.05);
+}
+
+#icon-menu-active{
+    width: 60px;
+    height: 60px;
+    position: fixed;
+    right: 20px;
+    top: 10px;
+    font-size: 25px;
+    border-radius: 50%;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    background: rgb(255, 255, 255);
+    color: rgb(15, 15, 15);
+    border: 3px solid black;
+    box-sizing: border-box;
+    transition: color 500ms, background 600ms, transform 400ms;
+    z-index: 1000;
+}
+
+#icon-menu-active:hover{
+    background: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
+    border: 3px solid black;
+    box-sizing: border-box;
+    transform: scale(1.05);
+}
+
+.icon-menu-active-on{
+    display: flex !important;
+}
+
+.icon-menu-off{
+    display: none;
+}
+
+.show-lateral{
+    width: 300px;
+    transform: translateX(0);
+    background-size: 100%;
+}
+
+@media (max-width: 600px){
+    .logo-caporale img{
+        width: 150px;
+        margin-top: 15px;
+    }
+
+    .reserve-menu i{
+        font-size: 20px;
+        margin-right: 5px;
+    }
+    
+    .reserve-menu h1{
+        font-size: 20px;
+        color: azure;
+        font-family: 'Mukta', sans-serif;
+        transition: color 500ms;
+    }
+
+    .reserve-menu{
+        right: 90px;
+    }
+
+}
+
+@media (max-width: 500px){
+
+    .reserve-h1-big{
+        display: none;
+    }
+
+    .reserve-h1-small{
+        display: block;
+        font-size: 18px !important;
+    }
+}
+
+@media (max-width: 430px){
+    .logo-caporale img{
+        width: 110px;
+        margin-top: 22px;
+    }
+}
+
+@media (max-width: 385px){
+    .logo-caporale img{
+        display: none;
+    }
+}

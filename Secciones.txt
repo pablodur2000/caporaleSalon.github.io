@@ -1,0 +1,35 @@
+Inicio/Home: Una introducción al salón, su filosofía, y posiblemente un carrusel de 
+imágenes destacadas o promociones actuales.
+
+Servicios: Una lista detallada de los servicios que ofrece el salón, como cortes de cabello, coloración, 
+peinados, tratamientos capilares, etc.
+
+Horarios.
+
+Reservas/Citas: Un sistema de reserva en línea para que los clientes puedan programar citas fácilmente.
+
+Galería/Fotos: Una galería de imágenes que muestra el trabajo del salón, incluyendo antes y después, así como fotos del interior del salón.
+
+Testimonios: reseñas sobre su experiencia en el salón.
+
+Blog/Consejos de belleza: Un blog donde puedas compartir consejos útiles de cuidado del cabello, tendencias de moda, y noticias relacionadas con la industria de la belleza.
+
+Contacto: Información de contacto, como dirección física, número de teléfono, correo electrónico y formulario de contacto.
+
+Política de privacidad/Términos y condiciones: Secciones legales importantes para proteger tanto al salón como a los clientes.
+
+Redes Sociales: Enlaces a las cuentas de redes sociales del salón para que los clientes puedan seguir las actualizaciones y compartir contenido.
+
+
+
+
+
+
+
+
+
+FAQ/Preguntas frecuentes: Una sección donde puedas responder a preguntas comunes que los clientes puedan tener sobre los servicios, precios, horarios, etc.
+
+Promociones/Ofertas: Información sobre las ofertas especiales, descuentos o promociones actuales.
+
+Equipo: Una sección que presenta al equipo de estilistas y sus habilidades, con fotos y biografías breves.
