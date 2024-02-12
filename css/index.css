@@ -122,7 +122,14 @@
     height: 300px;
     width: 300px;
     background-color: rgb(85, 85, 85);
+    overflow: hidden;
+}
 
+@media (max-width: 440px){
+    .service-content-img{
+        height: 70vw;
+        width: 100%;
+    }
 }
 
 .section-ubication{
