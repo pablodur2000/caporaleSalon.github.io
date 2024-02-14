@@ -34,7 +34,7 @@
 <body>
 
     <!----------Menu----------->
-    <header id="header" class="header">
+    <header id="header" class="headerClass">
         <div class="header-content"><div class="header-bar">
             
             <div class="logo-caporale">
@@ -76,6 +76,13 @@
         <h1 class="reserve-h1-small">Reservá tu cita</h1>
     </div>
 
+    <div id="social-media-container">
+        <div class="icons-social-media" id="icons-social-media"><a href="https://www.tiktok.com/@caporalesalon"><i class="fa-brands fa-tiktok"></i></a>
+        <a href="https://www.instagram.com/caporale_salon/"><i class="fa-brands fa-square-instagram"></i></a>
+        <a href="https://api.whatsapp.com/message/IG3542UA2AU5A1?autoload=1&app_absent=0"><i class="fa-brands fa-square-whatsapp"></i></a></div>
+        
+    </div>
+
 <!-----------------------Contenido-------------------->
 
 <div id="all">
@@ -94,7 +101,7 @@
     <section class="section-service">
         <div id="service">
             <a class="desplazar" href="#service" id="service-but"><div id="service-button">
-                <h1>Servicios</h1>
+                <h1 class="service-button-h1">Servicios</h1>
                 <div class="i-div"><i class="fa-solid fa-angles-down"></i></div>
             </div></a>
 
@@ -117,16 +124,78 @@
 
     </section>
 
+
     <section class="section-ubication">
-        <h1 id="section-ubication-h1-1">Consula el mapa para saber donde nos encontramos</h1>
+        <h1 id="section-ubication-h1-1">Consulta el mapa para saber donde nos encontramos</h1>
         <div id="container-ubicacion-map"></div>
         <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
         integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
         crossorigin=""></script>   
         <script src="js/map.js"></script>
+        <div class="map-text-bottom">
         <h1>Leandro Gomez 871, Paysandú Uruguay</h1>
+        <p><b class="text-Horarios">Horarios: </b><br>
+        Lunes a viernes: 9:30hs - 19:00hs. <br>
+        Sabados: 10:00hs - 18:00hs. <br>
+        Domingos: Cerrado.
+        </p></div>
     </section>
 
+    <!--/*----Sectrion contacto vesrion A------*/
+    <section class="section-contact">
+        <p class="contact-p-large">Conéctate con nosotros a través de nuestras redes sociales para mantenerte al día con las últimas noticias</p>
+        <p class="contact-p-small">Descubre más en nuestras redes sociales:</p>
+        <div class="contact-social-media">
+        <a href="https://www.tiktok.com/@caporalesalon"><i class="fa-brands fa-tiktok"></i></a>
+        <a href="https://www.instagram.com/caporale_salon/"><i class="fa-brands fa-square-instagram"></i></a>
+        <a href="https://api.whatsapp.com/message/IG3542UA2AU5A1?autoload=1&app_absent=0"><i class="fa-brands fa-square-whatsapp"></i></a></div>
+    </section>
+    -->
+    
+    <section class="section-curse-slider">
+        <div class="section-curse-slider-h1"><h1><b>Conocé nuestro curso!</b></h1></div>
+        <div class="container-slider">
+            <div class="content-slider">
+                <section class="slider-img" id="slider-img-1">
+                    <img src="https://scontent.cdninstagram.com/v/t39.30808-6/383372649_17882347895945633_2371944621569767571_n.jpg?stp=dst-jpg_e15&efg=eyJ2ZW5jb2RlX3RhZyI6ImltYWdlX3VybGdlbi4xNDQweDk2MC5zZHIifQ&_nc_ht=scontent.cdninstagram.com&_nc_cat=105&_nc_ohc=03fAab5yzXsAX_8vD2h&edm=APs17CUAAAAA&ccb=7-5&ig_cache_key=MzIwMDc2MzcwOTc2MDA4NTY4OA%3D%3D.2-ccb7-5&oh=00_AfB-YsrL4k5cgv1a9r4qEwOhlMtM77JvSd5K-FBeAoPCdA&oe=65D1451C&_nc_sid=10d13b" alt="">
+                </section>
+            </div>
+         
+        
+            <div class="content-slider">
+                <section class="slider-img" id="slider-img-2">
+                    <img src="https://scontent.cdninstagram.com/v/t39.30808-6/384112711_17882347907945633_2954417382771344708_n.jpg?stp=dst-jpg_e15&efg=eyJ2ZW5jb2RlX3RhZyI6ImltYWdlX3VybGdlbi4xNDQweDk2MC5zZHIifQ&_nc_ht=scontent.cdninstagram.com&_nc_cat=105&_nc_ohc=g-mbuKNVBDYAX926BCt&edm=APs17CUAAAAA&ccb=7-5&ig_cache_key=MzIwMDc2MzcwOTY1OTUzMDg2Nw%3D%3D.2-ccb7-5&oh=00_AfD-u0ZtbeCDESu_h2rWbfx1cp7HlSKD5mcpEh4MeSYDCQ&oe=65D15C56&_nc_sid=10d13b" alt="">
+                </section>
+            </div>
+        
+    
+    
+            <div class="content-slider">
+                <section class="slider-img" id="slider-img-3">
+                    <img src="https://scontent.cdninstagram.com/v/t39.30808-6/384097461_17882347916945633_2255059899750189270_n.jpg?stp=dst-jpg_e15&efg=eyJ2ZW5jb2RlX3RhZyI6ImltYWdlX3VybGdlbi4xNDQweDk2MC5zZHIifQ&_nc_ht=scontent.cdninstagram.com&_nc_cat=105&_nc_ohc=yllfPh7xm8UAX-_kgny&edm=APs17CUAAAAA&ccb=7-5&ig_cache_key=MzIwMDc2MzcwOTgxMDM1OTM4Mw%3D%3D.2-ccb7-5&oh=00_AfAwSxJEaiAp8rZskKIJPr_FYtQFnZeTgQ_CDajuX0wtPA&oe=65D08608&_nc_sid=10d13b" alt="">
+                </section>
+            </div>
+     
+    
+    
+       
+            <div class="content-slider">
+                <section class="slider-img" id="slider-img-4">
+                    <img src="https://scontent.cdninstagram.com/v/t39.30808-6/384098880_17882350076945633_3143473250827282885_n.jpg?stp=dst-jpg_e15&efg=eyJ2ZW5jb2RlX3RhZyI6ImltYWdlX3VybGdlbi4xNDQweDk1OS5zZHIifQ&_nc_ht=scontent.cdninstagram.com&_nc_cat=105&_nc_ohc=8HyvFM1cWjgAX_gvKJL&edm=APs17CUAAAAA&ccb=7-5&ig_cache_key=MzIwMDc3NjgxNzU4OTE2MDI5MA%3D%3D.2-ccb7-5&oh=00_AfAiNmFfhi99QUSk9MT0ABWRMF2_G4AOfvTEADT8CN7crA&oe=65D07EDA&_nc_sid=10d13b" alt="">
+                </section>
+            </div>
+        
+    
+    
+        
+            <div class="content-slider">
+                <section class="slider-img" id="slider-img-5">
+                    <img src="https://scontent.cdninstagram.com/v/t39.30808-6/384127472_17882350067945633_4252506859905999205_n.jpg?stp=dst-jpg_e15&efg=eyJ2ZW5jb2RlX3RhZyI6ImltYWdlX3VybGdlbi4xNDQweDk1OS5zZHIifQ&_nc_ht=scontent.cdninstagram.com&_nc_cat=105&_nc_ohc=MgKELMou3yAAX-jEYrV&edm=APs17CUAAAAA&ccb=7-5&ig_cache_key=MzIwMDc3NjgxNzcyMzQxODc2Nw%3D%3D.2-ccb7-5&oh=00_AfBkuJCD6UKxoGkLCKD-4uZY7_XC-LCCgynkF0K49NfvEQ&oe=65D0D6D9&_nc_sid=10d13b" alt="">
+                </section>
+            </div>
+        
+        </div>
+    </section>
 </div>
 
     <script src="js/js-main.js"></script>

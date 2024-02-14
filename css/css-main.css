@@ -153,6 +153,79 @@ header{
     animation: slideOut1 3s alternate forwards;
 }
 
+.icons-social-media{
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    height: 100%;
+    width: 100%;
+    animation: social-media-container-active 2s alternate forwards;
+}
+
+.icons-social-media-active{
+    display: flex;
+   
+}
+
+.icons-social-media-inactive{
+    display: flex;
+    animation: social-media-container-inactive 2s alternate forwards;
+}
+
+@keyframes social-media-container-active{
+    from{
+        transform: translateX(200px);
+        filter: blur(20px);
+    }to{
+        transform: translateX(0);
+        filter:  blur(0);
+    }
+}
+
+@keyframes social-media-container-inactive{
+    from{
+        transform: translateX(0);
+        filter: blur(0);
+    }to{
+        transform: translateX(200px);
+        filter:  blur(20px);
+        display: none;
+    }
+}
+
+#social-media-container{
+    position: fixed;
+    gap: 20px;
+    height: 250px;
+    width: 100px;
+    right: 2%;
+    bottom: 4%;
+    z-index: 999;
+    
+}
+
+.icons-social-media i{
+    border-radius: 50%;
+    font-size: 50px;
+    color: rgb(0, 0, 0);
+    background-color: rgba(255, 255, 255, 0.644);
+    width: 70px;
+    height: 70px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.social-media-container-off{
+    animation: social-media-container-off 2s alternate forwards;
+}
+
+
+
+
 @keyframes slideOut1{
     from{
         filter: blur(0);
@@ -163,6 +236,35 @@ header{
         filter: blur(30px);
         opacity: 0;
         transform: translateX(-300px);
+    }
+}
+
+@keyframes social-media-container-off{
+    from {
+        opacity: 1;
+        transform: translateX(0);
+        filter: blur(0);
+    }
+    to {
+        opacity: 0;
+        transform: translateX(-400px);
+        filter: blur(30px);
+    }
+}
+
+@keyframes social-media-container-on {
+    from {
+        opacity: 0;
+        transform: translateX(-400px);
+        filter: blur(30px);
+        gap: 100px;
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+        flex-direction: column;
+        gap: 20px;
+    
     }
 }
 
@@ -219,6 +321,12 @@ header{
         filter: drop-shadow(1px 5px 8px #ffffff);
     }
 }
+
+
+
+
+
+
 
 .menu{
     position: fixed;

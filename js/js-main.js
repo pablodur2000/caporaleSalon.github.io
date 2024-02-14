@@ -2,6 +2,9 @@
 document.getElementById("icon-menu").addEventListener("click", mostrarMenu);
 document.getElementById("icon-menu-active").addEventListener("click", mostrarMenu);
 
+
+var scrollVertical = 0;
+
 function mostrarMenu(){
     document.getElementById("show-menu").classList.toggle('show-lateral');
     document.getElementById("icon-menu").classList.toggle('icon-menu-off');
@@ -20,21 +23,38 @@ function mostrarMenu(){
     
     var reserve = document.getElementById("reserve-menu-id");
     reserve.classList.toggle("reserve-menu-off");
+    
+    
+
+    var social = document.getElementById("icons-social-media");
+    if (social.classList.contains('social-media-container-off' && !scrollVertical >= 800)){
+        social.classList.remove("social-media-container-off");
+    }else if (!social.classList.contains('social-media-container-off') && scrollVertical >= 800) {
+        social.classList.add("social-media-container-off");
+    } else{
+        social.classList.remove("social-media-container-off");
+    }
+
+
 };
 
 
 //-------------------------heeader-off-------------------------
 window.addEventListener('scroll', function() {
-    var scrollVertical = window.scrollY;
+    scrollVertical = window.scrollY;
     var posicionDeseada = 800; // Cambia este valor por la posición en la que deseas que ocurra la acción
 
     if (scrollVertical >= posicionDeseada) {
         document.getElementById("header").classList.add('header-off');
         document.getElementById("show-menu").classList.add('show-lateral-margin');
-    }else{
+        document.getElementById("icons-social-media").classList.add('icons-social-media-active');
+        document.getElementById("icons-social-media").classList.remove('icons-social-media-inactive');    
+    }else {
+        document.getElementById("icons-social-media").classList.add('icons-social-media-inactive');
         document.getElementById("header").classList.remove('header-off');
         document.getElementById("show-menu").classList.remove('show-lateral-margin');
-        }
+        document.getElementById("icons-social-media").classList.remove('icons-social-media-active');
+    }
 });
 
 //----------------------------Service button-------------------------//
@@ -64,7 +84,65 @@ $(document).ready(function(){
         },800);
 
     })
+});
 
+//----------------------curse-slider-auto------------------------//
+
+let slider = document.querySelector(".container-slider");
+let sliderIndividual = document.querySelectorAll(".content-slider")
+let contador = 1;
+let width = sliderIndividual[0].clientWidth;
+let intervalo = 3000;
+let reverse = false;
+
+window.addEventListener("resize", function(){
+    width = sliderIndividual[0].clientWidth;
+});
+
+setInterval(function(){
+    slides();
+}, intervalo);
+
+function slides(){
+
+    if (contador < 5 && !reverse){
+        slider.style.transform = "translate(" + (-width * contador)+"px)";
+        slider.style.transition = "transform 1.5s ease"
+        contador++;
+        
+    }else{
+        reverse = true
+        
+    }
+
+    if (contador > 0 && reverse){
+        contador--;
+        slider.style.transform = "translate(" + (-width * contador)+"px)";
+        slider.style.transition = "transform 1.5s ease"
+    }else{
+        reverse = false;
+    }
+
+
+}
+
+/*
+
+for( let i = 1; i <= 7; i++){
+    let img = document.getElementById("slider-img-" + i);
+    let img_last = document.getElementById("slider-img-" + (i-1));
+    setTimeout(function() {
+        
+        img.style.display = "flex";
+        img_last.style.display = "none";
+
+        if (i === 6){
+            i = 1;
+        }
+
+    },i * 2000); // Ajusta el tiempo según la duración de la animación
     
 
-});
+ 
+}*/
+
