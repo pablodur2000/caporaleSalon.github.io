@@ -38,23 +38,54 @@ function mostrarMenu(){
 
 };
 
-
+document.getElementById("icons-social-media").style.display = "none";  //icons.social-media inicia con display none
 //-------------------------heeader-off-------------------------
 window.addEventListener('scroll', function() {
     scrollVertical = window.scrollY;
     var posicionDeseada = 800; // Cambia este valor por la posición en la que deseas que ocurra la acción
 
+    var alturaPagina = document.body.scrollHeight;           // Altura total de la página
+    var alturaViewport = (window.innerHeight + 400);              // Altura del viewport
+    var alturaLogo = (window.innerHeight + 500);
+
+    var posicionOcultarRedes = alturaPagina - alturaViewport;
+    var moveLogo = alturaPagina - alturaLogo;
+
     if (scrollVertical >= posicionDeseada) {
-        document.getElementById("header").classList.add('header-off');
+        document.getElementById("header").classList.add('header-off');   
         document.getElementById("show-menu").classList.add('show-lateral-margin');
         document.getElementById("icons-social-media").classList.add('icons-social-media-active');
         document.getElementById("icons-social-media").classList.remove('icons-social-media-inactive');    
+        document.getElementById("icons-social-media").style.display = "flex";
     }else {
         document.getElementById("icons-social-media").classList.add('icons-social-media-inactive');
         document.getElementById("header").classList.remove('header-off');
         document.getElementById("show-menu").classList.remove('show-lateral-margin');
         document.getElementById("icons-social-media").classList.remove('icons-social-media-active');
     }
+
+    if (scrollVertical >= posicionOcultarRedes){
+        document.getElementById("icons-social-media").classList.add('icons-social-media-inactive'); 
+        document.getElementById("icons-social-media").classList.remove('icons-social-media-active');
+    }
+
+
+    const leftLogo = document.querySelector(".logo-footer-left");
+    const rightLogo = document.querySelector(".logo-footer-right");
+
+    if (scrollVertical >= moveLogo){
+        leftLogo.classList.add('logo-footer-active', 'logo-footer-left-moveIn');
+        rightLogo.classList.add('logo-footer-active', 'logo-footer-right-moveIn')
+        leftLogo.classList.remove('logo-footer-left-moveOut');
+        rightLogo.classList.remove('logo-footer-right-moveOut');
+    }else {
+        leftLogo.classList.remove('logo-footer-active', 'logo-footer-left-moveIn')
+        rightLogo.classList.remove('logo-footer-active', 'logo-footer-right-moveIn');
+        rightLogo.classList.add('logo-footer-right-moveOut'); 
+        leftLogo.classList.add('logo-footer-left-moveOut');
+    }
+    
+
 });
 
 //----------------------------Service button-------------------------//
@@ -105,7 +136,7 @@ setInterval(function(){
 
 function slides(){
 
-    if (contador < 5 && !reverse){
+    if (contador < 6 && !reverse){
         slider.style.transform = "translate(" + (-width * contador)+"px)";
         slider.style.transition = "transform 1.5s ease"
         contador++;
