@@ -368,39 +368,107 @@
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
-    gap: 15px;
+    gap: 5px;
 }
 
 .bar{
-    background-color: rgb(233, 233, 233);
-    padding: 15px;
+    background-color: rgb(105, 105, 105);
     padding-top: 0;
+    width: 100%;
+    cursor: pointer;
 }
 
 .bars-top{
     display: flex;
-    flex-direction: row;
-    gap: 15px;
+    flex-direction: column;
+    gap: 5px;
+    width: 600px;
+    margin: auto;
 }
 
 .bars-bottom{
     display: flex;
-    flex-direction: row;
-    gap: 15px;
+    flex-direction: column;
+    gap: 5px;
+    width: 600px;
+    margin: auto;
 }
+
+@media (max-width: 900px){
+    .bars-top{
+        width: 100%;
+   }
+
+   .bars-bottom{
+    width: 100%;
+}
+}
+
 
 .bar-flex{
     display: flex;
     flex-direction: row-reverse;
+    background-color: rgb(143, 142, 142);
     justify-content: space-between;
-    background-color: aqua;
-    padding: 8px;
-    
+    padding: 10px;
+    transition: filter 300ms cubic-bezier(0.165, 0.84, 0.44, 1) ;
+}
+
+.bar-flex:hover{
+    filter: brightness(2);
 }
 
 .inactive{
+    display: block;
+}
+
+.active{
     display: none;
 }
+
+
+.container-bar{
+    
+    display: block;
+    overflow: hidden;
+    background-color: rgb(211, 211, 211);
+    min-height: 100%;
+    max-height: 0px; /* Inicialmente, establece la altura máxima en 0 para ocultar el contenido */
+    opacity: 0; /* Inicialmente, establece la opacidad en 0 para ocultar el contenido */
+    transition: all 1000ms ease;
+}   
+
+.container-bar p{
+    margin: 10px;
+}
+  
+.active-bar {
+    max-height: 400px; /* Altura máxima deseada para el contenido del servicio */
+    opacity: 1; /* Hace que el contenido sea visible */
+}
+
+    
+ 
+
+@keyframes bar-content-active {
+    from{
+        height: 0;
+        display: none;
+    }to {
+        height: 100px;
+        display: block;
+    }
+}
+
+@keyframes bar-content-inactive {
+    from{
+        max-height: 0;
+    }to {
+        display: block;
+        max-height: 100%;
+    }
+}
+
 /*----------------------------------------------------*/
 
 
