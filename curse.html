@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=+, initial-scale=1.0">
+    
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script src="https://kit.fontawesome.com/de676a80bf.js" crossorigin="anonymous"></script>
+    
+    <link rel="stylesheet" href="css/css-main.css">
+    <link rel="stylesheet" href="css/curse.css">
+    
+
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+    crossorigin=""/>
+    <style>@import url('https://fonts.googleapis.com/css2?family=Chelsea+Market&display=swap');</style>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Mukta&family=Protest+Strike&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fuzzy+Bubbles:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/lightbox.css">  
+    
+    <title>Inicio - Caporale Salón</title>
+</head>
+<body>
+
+    <!----------Menu----------->
+    <header id="header" class="headerClass">
+        <div class="header-content"><div class="header-bar">
+            
+            <div class="logo-caporale">
+                <img src="img/logo-menu.png" alt="">
+            </div>
+            </div>
+            <div class="menu" id="show-menu">
+                <nav>
+                    <ul>
+                        <!--<li><a class = "desplazar" href="">Inicio</a></li> -->
+                        <li><a id="service-menu-option" class = "desplazar" href="#service">Servicios</a></li>
+                        <li><a class = "" href="">Reservá tu cita</a></li>
+                        <li><a class = "desplazar" href="">Ubicación</a></li>
+                        <!--<li><a class = "desplazar" href="">Contacto</a></li>-->
+                        <li><a class = "" href="">Curso</a></li>
+                        <li><a class = "" href="">Galeria</a></li>
+                        <li><a class = "desplazar" href="#">Testimonios</a></li>
+                        <li><a class = "desplazar" href="#">Preguntas frecuentes</a></li>
+                    </ul>
+                </nav>    
+            </div>
+        </div>
+
+    </header>
+
+
+
+    <div id="icon-menu">
+        <i class="fa-solid fa-bars"></i>
+    </div>
+
+    <div id="icon-menu-active">
+        <i class="fa-solid fa-xmark"></i>
+    </div>
+
+    <div class="reserve-menu" id="reserve-menu-id">
+        <i class="fa-regular fa-calendar-check"></i>
+        <h1 class="reserve-h1-big">¡Reservá tu cita aqui!</h1>
+        <h1 class="reserve-h1-small">Reservá tu cita</h1>
+    </div>
+
+    <div id="social-media-container">
+        <div class="icons-social-media" id="icons-social-media"><a href="https://www.tiktok.com/@caporalesalon"><i class="fa-brands fa-tiktok"></i></a>
+        <a href="https://www.instagram.com/caporale_salon/"><i class="fa-brands fa-instagram"></i></a>
+        <a href="https://api.whatsapp.com/message/IG3542UA2AU5A1?autoload=1&app_absent=0"><i class="fa-brands fa-whatsapp"></i></a></div>
+        
+    </div>
+
+<!-----------------------Contenido-------------------->
+
+<div id="all">
+
+    <section class="curse-content-info">
+        <div class="curse-content-info-info"> 
+
+        </div>
+        <div class="curse-content-info-testimony">
+            <video src="videos/curse-testimony.mp4" controls></video>
+        </div>
+    </section>
+
+    <footer id="footer">
+        <div class="container-footer-top">
+            <div class="container-footer-logo">
+                <img src="img/logo-footer-left.png" alt="" class="logo-footer-left">
+                <img src="img/logo-footer-letra.png" alt="" class="logo-footer-letra">
+                <img src="img/logo-footer-right.png" alt="" class="logo-footer-right">
+            </div>
+        </div>
+            <div class="container-footer-data">
+                <div class="container-footer-data-left">
+                    <p>
+                        <b>Lunes:</b>   09:30hs - 18:30hs<br>
+                        <b>Martes:</b>   09:30hs - 18:30hs<br>
+                        <b>Miercoles:</b>   09:30hs - 18:30hs<br>
+                        <b>Jueves: </b>  09:30hs - 18:30hs<br>
+                        <b>Viernes:</b>   09:30hs - 18:30hs<br>
+                        <b>Sabados: </b>  09:30hs - 18:30hs<br>
+                        <b>Domingos:</b>  Cerrado 
+                    </p>
+                </div>
+    
+                <div class="container-footer-data-center">
+                    <h1>Te esperamos!</h1>
+                    <div class="container-redes-footer">
+                        <div class="redes-footer"><i class="fa-brands fa-tiktok"></i></div>
+                        <div class="redes-footer"><i class="fa-brands fa-instagram"></i></div>
+                        <div class="redes-footer"><i class="fa-brands fa-facebook-f"></i></div>
+                    </div>
+                </div>
+    
+                <div class="container-footer-data-right">
+                    <div class="container-footer-data-right-top">
+                        <p>
+                            Leandro Gómez 871 <br>
+                            Paysandú, <br>
+                            Uruguay
+                        </p>
+                    </div>
+    
+                    <div class="container-footer-data-right-bottom">
+                        <p>
+                            Todos los derechos reservados <br>
+                            ©2024 Salón Caporale
+                        </p>
+                    </div>
+                </div>
+            </div>
+    
+        
+    </footer>
+
+</div>
+
+
+
+
+    <script src="js/js-main.js"></script>
+
+</body>
+</html>

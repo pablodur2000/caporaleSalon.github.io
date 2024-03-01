@@ -1,0 +1,24 @@
+.curse-content-info{
+    width: 100%;
+    margin-top: 80px;
+    padding: 80px;
+    padding-top: 40px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.curse-content-info-info{
+    background-color: aqua;
+  
+    max-width: 1200px;
+    min-width: 300px;
+}
+
+.curse-content-info-testimony{
+    
+}
+
+.curse-content-info-testimony video{
+    height: 800px;
+}

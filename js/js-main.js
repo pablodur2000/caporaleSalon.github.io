@@ -88,99 +88,6 @@ window.addEventListener('scroll', function() {
 
 });
 
-//----------------------------Service button-------------------------//
-document.getElementById("service-but").addEventListener("click", showServices);
-
-function showServices(){
-    document.getElementById("service-content-id").classList.toggle('service-content-active');
-}
-
-document.getElementById("service-menu-option").addEventListener("click", showServicesMenu);
-
-function showServicesMenu(){
-    if (!document.getElementById("service-content-id").classList.contains('service-content-active')){
-        document.getElementById("service-content-id").classList.toggle('service-content-active');
-    }else{}
-}
-//---------------------------smooth service scroll--------------------//
-
-$(document).ready(function(){
-    var ir_a = $(".desplazar");  //Declaramos variable ir_a y le decimos que su valor es la clase .desplazar
-
-    ir_a.click(function(event){   //cuando se haga click a ir_a, se ejecutará la funcion con evento 
-        event.preventDefault();    //previene configuraciones default
-
-        $("body, html").animate({   //.animate es de jquery
-            scrollTop: $(this.hash).offset().top,  // 
-        },800);
-
-    })
-});
-
-//----------------------curse-slider-auto------------------------//
-
-let slider = document.querySelector(".container-slider");
-let sliderIndividual = document.querySelectorAll(".content-slider")
-let contador = 1;
-let width = sliderIndividual[0].clientWidth;
-let intervalo = 3000;
-let reverse = false;
-
-window.addEventListener("resize", function(){
-    width = sliderIndividual[0].clientWidth;
-});
-
-setInterval(function(){
-    slides();
-}, intervalo);
-
-function slides(){
-
-    if (contador < 6 && !reverse){
-        slider.style.transform = "translate(" + (-width * contador)+"px)";
-        slider.style.transition = "transform 1.5s ease"
-        contador++;
-        
-    }else{
-        reverse = true
-        
-    }
-
-    if (contador > 0 && reverse){
-        contador--;
-        slider.style.transform = "translate(" + (-width * contador)+"px)";
-        slider.style.transition = "transform 1.5s ease"
-    }else{
-        reverse = false;
-    }
-
-
-}
-
-const elements = document.getElementsByClassName('bar');
-
-for (let i = 0; i < elements.length; i++) {
-    elements[i].addEventListener('click', () => {
-        const containerBar = elements[i].querySelector('.container-bar');
-        const isActive = containerBar.classList.contains('active-bar');
-
-        // Oculta todos los contenedores de barra antes de mostrar el actual
-        const allContainerBars = document.querySelectorAll('.container-bar');
-        allContainerBars.forEach(container => {
-           
-            container.classList.remove('active-bar');
-            
-        });
-
-        // Si el contenedor actual no está activo, muéstralo; de lo contrario, ocúltalo
-        
-        if (!isActive) {
-            containerBar.classList.toggle('active-bar');
-            
-        }
-    });
-}
-
 
 
 
@@ -239,3 +146,19 @@ for( let i = 1; i <= 7; i++){
  
 }*/
 
+/*
+//----------------------------Service button-------------------------//
+document.getElementById("service-but").addEventListener("click", showServices);
+
+function showServices(){
+    document.getElementById("service-content-id").classList.toggle('service-content-active');
+}
+
+document.getElementById("service-menu-option").addEventListener("click", showServicesMenu);
+
+function showServicesMenu(){
+    if (!document.getElementById("service-content-id").classList.contains('service-content-active')){
+        document.getElementById("service-content-id").classList.toggle('service-content-active');
+    }else{}
+}
+*/
