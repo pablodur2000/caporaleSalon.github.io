@@ -323,7 +323,7 @@
 
 @media (max-width: 650px){
     .service-content-inter-img{
-        height: 45vw;
+        height: 42vw;
         width: 90%;
     }
 
@@ -469,6 +469,7 @@
     height: 30%;
     max-height: 150px;
     max-width: 700px;
+    -webkit-backdrop-filter: blur(20px) brightness(0.3);
     backdrop-filter: blur(20px) brightness(0.3);
     z-index: 10;
     position: absolute;
@@ -481,6 +482,7 @@
 }
 
 .section-curse-slider-h1:hover{
+    -webkit-backdrop-filter: blur(20px) brightness(4);
     backdrop-filter: blur(20px) brightness(4);
 }
 
