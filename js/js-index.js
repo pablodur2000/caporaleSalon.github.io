@@ -119,11 +119,54 @@ document.querySelectorAll('.service-content-inter-text').forEach(function(elemen
         }
     });
 });
-
-
-
-
 //----------------------------------------------------------------
+
+
+//---------------------cursor service----------------------------
+
+var cursorService = document.getElementById("cursor-service");
+
+window.addEventListener('scroll', function() {
+    scrollVertical = window.scrollY;
+    var posicionDeseada = 500;   
+    var h1_0 = document.getElementById("service-content-inter-text-h1-id0");
+    var text_0 = document.getElementById("service-content-inter-text-p-id0");
+
+    if ((posicionDeseada < scrollVertical) && cursorService.style.display !== 'none'){
+        cursorService.style.transform = 'translateX(0) translateY(36px)';
+        cursorService.style.opacity = '1';
+
+        setTimeout(function (){  
+            cursorService.style.transition = 'transform 300ms ease, opacity 1s ease, color 300ms ease';
+            cursorService.style.transform = 'scale(1.2)';
+        }, 2000);
+
+        setTimeout(function (){  
+            cursorService.style.opacity = '0';
+            
+            h1_0.style.opacity = "0";
+            setTimeout(function (){
+                cursorService.style.display = 'none';
+                h1_0.style.display = "none";
+                text_0.style.display = "flex";
+
+
+                setTimeout(function (){  
+                    text_0.style.opacity = "1";
+                }, 100);
+
+            }, 500);
+
+        }, 2300);
+
+    }
+
+});
+
+//--------------------------------------------------------------
+
+
+
 
 //---------------------------smooth service scroll--------------------//
 

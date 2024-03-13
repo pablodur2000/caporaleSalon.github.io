@@ -1,3 +1,8 @@
+#all{
+    overflow: hidden;
+}
+
+
 .curse-content-info-top{
     width: 100%;
     margin-top: 80px;
@@ -19,7 +24,10 @@
 
 .curse-content-info-top-div{
     margin: 20px 0px;
+    display: flex;
 }
+
+
 
 .curse-content-info-top-div h1{
     font-family: 'Mukta', sans-serif;
@@ -33,12 +41,17 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    text-align: center;
 }
 
 #curse-content-info-top-div-imgStart{
     display: flex;
     gap: 20px;
     width: 97%;
+    overflow: hidden;
+    margin: 0;
+    padding: 20px;
+    box-sizing: border-box;
 }
 
 .curse-content-info-top-div-imgStart-large1{
@@ -67,20 +80,19 @@
 }
 
 .curse-content-info-top-div-imgStart-large-img1{
-    height: 60%;
-    border-radius: 0px 0px 20px 20px;  
+    height: 100%;
+    border-radius: 20px 20px 20px 20px;  
     border-top: 3px solid rgb(146, 146, 146);
     background-image: url(../img/curse-img-start-1.jpg);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    flex-shrink: 0;
     
 }
 
 .curse-content-info-top-div-imgStart-large-img2{
-    height: 60%;
-    border-radius: 20px 20px 0px 0px;
+    height: 100%;
+    border-radius: 20px 20px 20px 20px;
     border-bottom: 3px solid rgb(146, 146, 146);
     background-image: url(../img/curse-img-start-2.jpg);
     background-size: cover;
@@ -90,13 +102,23 @@
 
 #curse-content-info-top-div-imgStart-small{
     background-color: rgb(82, 82, 82);
-    width: 35%;
-    margin: 0 10px;
     border-radius: 20px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+
     -webkit-box-shadow: 0px 0px 18px -1px rgba(255,255,255,1);
     -moz-box-shadow: 0px 0px 18px -1px rgba(255,255,255,1);
     box-shadow: 0px 0px 18px -1px rgba(255,255,255,1);
     
+}
+
+#curse-content-info-top-div-imgStart-small-h1{
+    opacity: 0;
+    font-size: 36px;
+    transition: all 4s ease;
 }
 
 .curse-content-info-top-div-imgStart-large-text{
@@ -104,19 +126,37 @@
     font-size: 20px;
     color: rgb(255, 255, 255);
     text-align: center;
+    display: flex;
+    align-items: center;
     padding: 0 15px;
+    height: 0;
+    overflow: hidden;
+    opacity: 0;
 
+    transition: height 2s ease, opacity 2s ease;
 }
 
 .curse-content-info-top-div-imgStart-large-text p{
     font-family: 'Mukta', sans-serif;
+    line-height: 1.3;
 }
+
+
 .curse-content-info-top-testimony{
     position: relative;
+    display: flex;
+    align-items: center;
 }
 
 .curse-content-info-top-testimony video{
     filter:brightness(0.3) blur(1px);
+    transition: all 1s ease;
+
+}
+
+#curse-content-info-top-testimony-video{
+    opacity: 0;
+    transition: opacity 3s ease;
 }
 
 .curse-content-info-top-testimony-volumeOn{
@@ -130,12 +170,14 @@
     z-index: 2;
     backdrop-filter: blur(10px);
     cursor: pointer;
-
     display: flex;
     justify-content: center;
     align-items: center;
     color: black;
     font-size: 45px;
+    opacity: 0;
+
+    transition: opacity 2s ease;
 }
 
 .curse-content-info-top-testimony-volumeOn i{
@@ -143,19 +185,22 @@
 }
 
 .curse-content-info-top-testimony video{
-    height: 800px;
+    width: 100%;
 }
 
 #curse-content-info-top-div-syllabus{
     background: rgb(43, 43, 43);
     width: 60%;
-    height: 400px;
+    height: 0px;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
     border-radius: 10px;
+    opacity: 0;
+    overflow: hidden;
 
+    transition: opacity 2s ease, height 2s ease;
     -webkit-box-shadow: 0px 0px 20px -6px rgba(255,255,255,1);
     -moz-box-shadow: 0px 0px 20px -6px rgba(255,255,255,1);
     box-shadow: 0px 0px 20px -6px rgba(255,255,255,1);
@@ -174,6 +219,154 @@
     font-family: 'Mukta', sans-serif;
 }
 
+@media (max-width: 1750px){
+    .curse-content-info-top{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100vw;
+    }
+
+    .curse-content-info-top-div{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .curse-content-info-top-info{
+        width: 100%;
+    }
+
+    #curse-content-info-top-div-imgStart{
+        gap: 40px;
+    }
+
+    #curse-content-info-top-div-imgStart-small{
+        height: 200px;
+        width: 70%;
+        margin: 0;
+    }
+
+    .curse-content-info-top-div-imgStart-large-text{
+        font-size: 23px;
+    }
+
+    .curse-content-info-top-div-imgStart-large1{
+        width: 100%;
+        margin: 0;
+    }
+
+    .curse-content-info-top-div-imgStart-large2{
+        width: 100%;
+        padding: 0;
+    }
+
+    #curse-content-info-top-div-syllabus{
+        width: 70%;
+        height: 450px;
+    }
+
+    #curse-content-info-top-div-imgStart{
+        width: 100%;
+        flex-direction: row;
+    }
+
+    #curse-content-info-top-div-syllabus p{
+        font-size: 25px;
+    }
+
+    .curse-content-info-top-testimony video{
+        width: 80vw;
+        max-width: 700px;
+        margin-top: 30px;
+    }
+}
+
+@media (max-width: 1200px){
+    .curse-content-info-top-info{
+        width: 100%;
+    }
+    .curse-content-info-top{
+        width: 100%;
+        padding: 0;
+        margin-bottom: 50px;
+    }
+
+    #curse-content-info-top-div-imgStart{
+        width: 100%;
+        flex-direction: column;
+    }
+
+    #curse-content-info-top-div-imgStart-small{
+        width: 80vw;
+    }
+
+    .curse-content-info-top-div-imgStart-large1{
+        width: 80vw;
+        margin: 0;
+    }
+
+    .curse-content-info-top-div-imgStart-large2{
+        width: 80vw;
+        padding: 0;
+    }
+
+    #curse-content-info-top-div-syllabus{
+        width: 80vw;
+        height: 350px;
+    }
+
+    #curse-content-info-top-div-syllabus p{
+        font-size: 22px;
+    }
+}
+
+@media (max-width: 770px){
+    #curse-content-info-top-div-syllabus p{
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 500px){
+    #curse-content-info-top-div-syllabus p{
+        font-size: 18px;
+    }
+
+    .curse-content-info-top-div-imgStart-large-text p{
+        font-size: 20px;
+        line-height: 1.1;
+    }
+
+    #curse-content-info-top-div-imgStart-small h1{
+        font-size: 34px;
+        line-height: 1.3;
+    }
+
+    #curse-content-info-top-div-title{
+        margin-top: 40px;
+        display: none;
+    }
+}
+
+@media (max-width: 440px){
+    #curse-content-info-top-div-syllabus{
+        height: calc(550px - 30vw);
+        justify-content: flex-start;
+        overflow-y: scroll;
+    }
+
+    #curse-content-info-top-div-title{
+        margin-top: 40px;
+        margin-bottom: 40px;
+    }
+
+}
+
+@media (max-width: 370px){
+    #curse-content-info-top-div-syllabus p{
+        font-size: 17px;
+    }
+}
+
 .curse-content-info-bottom{
     width: 100%;
     padding: 80px;
@@ -188,34 +381,47 @@
 #curse-content-info-bottom-div-matricle{
     height: 400px;
     width: 70%;
+    max-width: 1200px;
     background-image: url("../img/curse-matricle.jpg");
-    border-radius: 5px;
+    border-radius: 15px;
+    -webkit-box-shadow: 0px 0px 20px -6px rgba(255,255,255,1);
+    -moz-box-shadow: 0px 0px 20px -6px rgba(255,255,255,1);
+    box-shadow: 0px 0px 20px -6px rgba(255,255,255,1);
+    display: none;
 }
 
+/*---------contactttttttttttttttttttt------*/
 .curse-content-info-bottom-div-matricle-contact{
     background: cadetblue;
-    min-width: 452px;
-    max-width: 452px;
+    width: 480px;
+    display: none;
 }
 
 .curse-content-info-bottom-div-matricle-horizontal{
-    width: 50%;
-    height: 100%;
+    width: 0px;
+    overflow: hidden;
+    height: 400px;
     background-color: rgba(138, 138, 138, 0.493);
     backdrop-filter: blur(10px);
     border-right: 3px solid rgb(146, 146, 146);
-    border-radius: 5px 0 0 5px;
+    border-radius: 15px 0 0 15px;
     display: flex;
     align-items: center;
+    justify-content: center;
+
+    transition: all 2s ease;
 }
 
 .curse-content-info-bottom-div-matricle-horizontal-text{
-   padding: 0 30px;
-   display: flex;
-   flex-direction: column;
-   align-items: center;
-   justify-content: space-between;
-   gap: 10px;
+    padding: 0 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    opacity: 0;
+
+    transition: opacity 2s ease;
 }
 
 .curse-content-info-bottom-div-matricle-horizontal-text-top{
@@ -262,4 +468,64 @@
 
 .curse-content-info-bottom-div-matricle-horizontal-text-bottom-img a{
     color: rgb(255, 255, 255);
+}
+
+@media (max-width: 1750px){
+    .curse-content-info-bottom{
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 80px;
+    }
+
+    #curse-content-info-bottom-div-matricle{
+        background-image: url(../img/curse-matricle-vertical.jpg);
+        background-position: bottom;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        height: 800px;
+        width: 80vw;
+        max-width: 900px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .curse-content-info-bottom-div-matricle-contact{
+        width: 80vw;
+        height: 400px;
+        max-width: 900px;
+    }
+
+    .curse-content-info-bottom-div-matricle-horizontal{
+        width: 100%;
+        height: calc(60% - 5vw);
+        border-bottom: 4px solid rgb(206, 206, 206);
+        border-right: 0;
+        border-radius: 15px 15px 0px 0px;
+        height: 0;
+    }
+
+}
+
+@media (max-width: 520px){
+    .curse-content-info-bottom-div-matricle-horizontal-text-top p{
+        font-size: 18px;
+    }
+    
+    .curse-content-info-bottom-div-matricle-horizontal-text{
+        padding: 0 20px;
+    }
+
+    .curse-content-info-bottom-div-matricle-horizontal{
+        align-items: center;
+        overflow-x: scroll;
+    }
+
+    .curse-content-info-bottom-div-matricle-horizontal-text-bottom{
+        min-width: 220px;
+    }
 }

@@ -42,7 +42,14 @@ document.getElementById("icons-social-media").style.display = "none";  //icons.s
 //-------------------------heeader-off-------------------------
 window.addEventListener('scroll', function() {
     scrollVertical = window.scrollY;
-    var posicionDeseada = 800; // Cambia este valor por la posición en la que deseas que ocurra la acción
+    
+    var posicionDeseada; // Cambia este valor por la posición en la que deseas que ocurra la acción
+
+    if (window.location.pathname.includes("curse.html")){  //window.location.pathname == obtener la url actual
+        posicionDeseada = 100;
+    }else{
+        posicionDeseada = 800;
+    }
 
     var alturaPagina = document.body.scrollHeight;           // Altura total de la página
     var alturaViewport = (window.innerHeight + 400);              // Altura del viewport
