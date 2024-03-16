@@ -17,8 +17,9 @@ $(document).ready(function(){
 //--------------------button-start-animation-----------------------------
 document.addEventListener("DOMContentLoaded", function() {
     var buttonStart = document.querySelector('#button-start-click');
-    buttonStart.style.transform = 'translate(0)';
+    buttonStart.style.transform = 'translateY(-140px)';
     buttonStart.style.filter = 'blur(0)';
+    buttonStart.style.opacity = '1';
 
     setTimeout( function() {
         buttonStart.style.animation = 'jump 0.5s infinite alternate';
@@ -220,7 +221,6 @@ function slides(){
         reverse = false;
     }
 
-
 }
 
 const elements = document.getElementsByClassName('bar');
@@ -246,6 +246,71 @@ for (let i = 0; i < elements.length; i++) {
         }
     });
 }
+
+
+//--------movimientos de pagina aparte de la de servicios---------
+document.addEventListener("DOMContentLoaded", function() {
+    var testimonio1 = document.getElementById("container-testimonial-1");
+    var testimonio2 = document.getElementById("container-testimonial-2");
+    var testimonio3 = document.getElementById("container-testimonial-3");
+    var barPreguntas = document.querySelectorAll('.bar');
+    var barPreguntas1 = document.querySelectorAll('.bar-1');
+    var barPreguntas2 = document.querySelectorAll('.bar-2');
+
+    var windowHeight = window.innerHeight;
+    var windowWidth = window.innerWidth;
+
+    function checkVisibility(){
+                                        //testimonios
+            var boundingTestimonio1 = testimonio1.getBoundingClientRect();
+            
+            if (boundingTestimonio1.top >= 0 && boundingTestimonio1.top <= windowHeight - 200){
+                testimonio1.style.transform = 'rotate(0deg)';
+                testimonio1.style.opacity  = '1';
+            }
+
+            var boundingTestimonio2 = testimonio2.getBoundingClientRect();
+            
+            if (boundingTestimonio2.top >= 0 && boundingTestimonio2.top <= windowHeight - 200){
+                testimonio2.style.opacity  = '1';
+            }
+
+            var boundingTestimonio3 = testimonio3.getBoundingClientRect();
+            
+            if (boundingTestimonio3.top >= 0 && boundingTestimonio3.top <= windowHeight - 200){
+                testimonio3.style.transform = 'rotate(0deg)';
+                testimonio3.style.opacity  = '1';
+            }
+        
+                                        //preguntas frecuentes
+            for (let i = 0; i < barPreguntas.length; i++){
+                var boundingBarPreg = barPreguntas[i].getBoundingClientRect();
+                
+                if (boundingBarPreg.top >= 0 && boundingBarPreg.top <= windowHeight){
+                    barPreguntas[i].style.transform = 'translate(0)';
+                    barPreguntas[i].style.opacity  = '1';
+                    barPreguntas[i].style.filter = 'blur(0)'
+                }
+            }
+        
+        
+        }
+
+
+    
+
+    
+    window.addEventListener('scroll', checkVisibility);
+    window.addEventListener('resize', function() {
+        windowHeight = window.innerHeight;
+        windowWidth = window.innerWidth;
+        checkVisibility();
+     }); // Vuelve a verificar la visibilidad al cambiar el tamaño de la ventana
+    checkVisibility();
+
+});
+
+//---------------------------------------------------------
 
 
 
