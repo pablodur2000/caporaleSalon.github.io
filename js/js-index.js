@@ -17,7 +17,11 @@ $(document).ready(function(){
 //--------------------button-start-animation-----------------------------
 document.addEventListener("DOMContentLoaded", function() {
     var buttonStart = document.querySelector('#button-start-click');
-    buttonStart.style.transform = 'translateY(-140px)';
+    if (window.innerWidth < 1100){
+        buttonStart.style.transform = 'translateY(-200px)';
+    }else{
+        buttonStart.style.transform = 'translateY(-140px)';
+    }
     buttonStart.style.filter = 'blur(0)';
     buttonStart.style.opacity = '1';
 
@@ -224,28 +228,52 @@ function slides(){
 }
 
 const elements = document.getElementsByClassName('bar');
+var arrow = document.querySelectorAll('.inactive');
 
 for (let i = 0; i < elements.length; i++) {
+    
     elements[i].addEventListener('click', () => {
         const containerBar = elements[i].querySelector('.container-bar');
         const isActive = containerBar.classList.contains('active-bar');
+        
 
         // Oculta todos los contenedores de barra antes de mostrar el actual
         const allContainerBars = document.querySelectorAll('.container-bar');
         allContainerBars.forEach(container => {
-           
             container.classList.remove('active-bar');
-            
+        });
+        arrow.forEach(arrows => {
+            arrows.style.transform = 'rotate(0)';
         });
 
         // Si el contenedor actual no está activo, muéstralo; de lo contrario, ocúltalo
         
         if (!isActive) {
             containerBar.classList.toggle('active-bar');
-            
+            arrow[i].style.transform = 'rotate(90deg)';
         }
     });
 }
+
+
+var miElemento = document.querySelectorAll('.section-curse-slider-h1');
+var sliderAll = document.querySelectorAll('.slider-img')
+
+
+    // Se ejecuta cuando el mouse entra en el elemento
+    for (let i = 0; i < 6; i++){
+    miElemento[0].addEventListener('mouseenter', function() {
+        sliderAll[i].style.filter = 'blur(4px) brightness(0.6)';
+
+    });
+    
+    miElemento[0].addEventListener('mouseleave', function() {
+        // Se ejecuta cuando el mouse sale del elemento
+        sliderAll[i].style.filter = 'blur(0px) brightness(1)';
+    });
+    }
+
+
 
 
 //--------movimientos de pagina aparte de la de servicios---------
