@@ -73,6 +73,9 @@
 
 .curse-container-top-img img{
     width: 100%;
+    filter: sepia() contrast(1.5);
+
+    transition: all 2s ease;
 }
 
 .curse-container-top-info{
@@ -345,8 +348,10 @@
 .curse-container-medium-inter-individual{
     height: 160px;
     width: 260px;
-    background-color: rgb(142, 142, 142);
+    background-color: rgba(255, 255, 255, 0);
     flex-shrink: 0;
+
+    transition: all 1.5s cubic-bezier(0, 0.1, 0.5, 0.8);
 }
 
 .curse-container-medium-inter-individual p {
@@ -359,6 +364,9 @@
     text-align: center;
     color: white;
     font-size: 20px;
+    opacity: 0;
+
+    transition: all 1s ease;
 }
 
 
@@ -423,7 +431,7 @@
     display: flex;
     flex-direction: column;
     gap: 15px;
-    height: 280px;
+    height: 310px;
 }
 
 .curse-container-bottom-prices-top-individual{
@@ -455,6 +463,7 @@
     justify-content: center;
     align-items: center;
     transition: all 700ms ease;
+    z-index: 9;
 }
 
 .curse-container-bottom-prices-top-circle-first{
@@ -536,6 +545,10 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    filter: contrast(5);
+    z-index: 999;
+
+    transition: all 800ms ease;
 }
 
 .curse-container-bottom-prices-img img{
@@ -562,6 +575,9 @@
     background-color: rgb(119, 119, 119);
     cursor: pointer;
     border-radius: 20px;
+    opacity: 0;
+
+    transition: all 500ms ease;
 }
 
 .curse-container-bottom-prices-bottom-wpp-container a{
@@ -580,6 +596,7 @@
 }
 
 .curse-container-bottom-testimony{
+    position: relative;
     height: 100%;
     width: 45%;
     background-color: gray;
@@ -588,11 +605,43 @@
     justify-content: center;
     align-items: flex-end;
     border-radius: 15px;
+    z-index: 6;
 }
 
 .curse-container-bottom-testimony video{
     width: auto;
+    filter:brightness(0.3) blur(1px);
+
+    transition: all 1s ease;
 }
+
+.curse-content-info-top-testimony-volumeOn{
+    position: absolute;
+    height: 120px;
+    width: 120px;
+    background-color: rgba(255, 255, 255, 0.555);
+    border-radius: 50%;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 40;
+    backdrop-filter: blur(10px);
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: black;
+    font-size: 45px;
+
+    transition: all 400ms ease;
+
+}
+
+.fa-volume-xmark{
+    opacity: 0;
+    position: absolute;
+}
+
 
 
 @media (max-width: 1650px){
