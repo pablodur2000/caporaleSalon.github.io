@@ -1,3 +1,108 @@
+
+
+//------------------------prices-------------------------
+
+var h2Prices = document.querySelectorAll('.h2-prices');
+var pPrices = document.querySelectorAll('.p-prices');
+var circles = document.querySelectorAll('.curse-container-bottom-prices-top-circle');
+var circleActive = document.querySelectorAll('.curse-container-bottom-prices-top-circle-active');
+
+for (let i = 0; i < h2Prices.length; i++){
+
+    h2Prices[i].addEventListener('click', function () {
+        
+        circles.forEach(circle => {
+            circle.style.backgroundColor = 'white';
+        });
+
+        circleActive.forEach(circleA => {
+            circleA.style.opacity = '0';
+        });
+
+        pPrices.forEach(p => {
+            p.style.padding = '0';
+            p.style.maxHeight = '0';
+            p.style.opacity = '0';
+        });
+
+        pPrices[i].style.opacity = '1';
+        pPrices[i].style.padding = '10px 0 30px 15px';
+        pPrices[i].style.maxHeight = '300px';
+
+        circles[i].style.backgroundColor = 'yellow';
+
+        circleActive[i].style.opacity = '1';
+
+
+    });
+
+}
+
+
+//-----------End Prices------------
+
+
+//-------------------Movimientos página-----------------
+
+document.addEventListener("DOMContentLoaded", function() {
+    var titleCurse = document.querySelectorAll('.title-curse');
+    var containersTopIndividual = document.querySelectorAll('.curse-container-top-info-individual');
+    var containerTopInfo = document.querySelectorAll('.curse-container-top-info');
+
+    var windowHeight = window.innerHeight;
+    var windowWidth = window.innerWidth;
+
+    function checkVisibility(){
+        titleCurse[0].style.opacity = '1';
+
+        for (let i = 0; i < containersTopIndividual.length; i++){
+
+            var boundingcontainersTopIndividual = containersTopIndividual[i].getBoundingClientRect();
+            
+            if (boundingcontainersTopIndividual.top >= 0 && boundingcontainersTopIndividual.top <= windowHeight - 200){
+                containerTopInfo[0].style.backdropFilter = 'blur(4px)';
+                containersTopIndividual[i].style.opacity = '1';
+                containersTopIndividual[i].style.transform = 'translateY(0)';
+            }
+        }
+
+    }
+
+
+    window.addEventListener('scroll', checkVisibility);
+    window.addEventListener('resize', function() {
+        windowHeight = window.innerHeight;
+        windowWidth = window.innerWidth;
+        checkVisibility();
+     }); // Vuelve a verificar la visibilidad al cambiar el tamaño de la ventana
+    checkVisibility();
+
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+
 document.addEventListener("DOMContentLoaded", function() {
     var textProxDate = document.getElementById("curse-content-info-top-div-imgStart-small-h1")
     var textSides = document.querySelectorAll('.curse-content-info-top-div-imgStart-large-text');
@@ -38,7 +143,7 @@ document.addEventListener("DOMContentLoaded", function() {
             
             if (boundingSyllabus.top >= 0 && boundingSyllabus.top <= windowHeight - 100){
                 syllabus.style.opacity = '1';
-                syllabus.style.height = '400px';
+                syllabus.style.height = '350px';
             }
 
             setTimeout(function (){  
@@ -113,7 +218,7 @@ document.addEventListener("DOMContentLoaded", function() {
                 }  
             }
         }
-*/
+
     }
 
     
@@ -126,7 +231,7 @@ document.addEventListener("DOMContentLoaded", function() {
     checkVisibility();
 
 });
-
+/*
 
 //---------------------volume on---------------------
 
@@ -142,5 +247,4 @@ document.addEventListener("DOMContentLoaded", function() {
 
 });
 
-
-//---------------------------------------------------
+*/
