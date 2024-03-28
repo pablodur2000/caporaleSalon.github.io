@@ -175,11 +175,11 @@ header{
     cursor: pointer;
     padding: 0 15px;
     transition: color 500ms, background 600ms, transform 800ms;
-    animation: social-media-container-active 2s alternate forwards;
+    animation: social-media-container-active 1s alternate forwards;
 }
 
 .reserve-menu-off{
-    animation: social-media-container-off 2s alternate forwards;
+    animation: social-media-container-off 1s alternate forwards;
 }
 
 .icons-social-media{

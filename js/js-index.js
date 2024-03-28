@@ -227,6 +227,9 @@ function slides(){
 
 }
 
+
+
+
 const elements = document.getElementsByClassName('bar');
 var arrow = document.querySelectorAll('.inactive');
 

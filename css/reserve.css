@@ -1,9 +1,19 @@
+#all{
+    z-index: 100;
+    transition: all 500ms ease;
+}
+
+
+#all h1{
+    font-family: 'Mukta', sans-serif;
+}
 
 .calendly-flex{
+    position: relative;
     margin-top: 80px;
     padding: 100px;
     width: 100%;
-    height: auto;
+    height: calc(100vh - 155px);
     display: flex;
     flex-direction: row;
     justify-content: space-around;
@@ -12,74 +22,241 @@
 }
 
 .calendly{
-    background-color: rgb(15, 15, 15);
-    min-width: 320px;
-    max-width: 100%;
-    height: 1045px;
     overflow-y: hidden;
+    display: flex;
+    align-items: center;
+    border-radius: 30px;
+    height: 100%;
+
+    -webkit-box-shadow: 0px 0px 11px 4px rgba(255,255,255,1);
+    -moz-box-shadow: 0px 0px 11px 4px rgba(255,255,255,1);
+    box-shadow: 0px 0px 11px 4px rgba(255,255,255,1);
+    
 }
 
 .calendly-inline-widget{
-    margin: auto;
-    background-color: rgb(15, 15, 15) !important;
-    width: 500px;
-    height: 1048px;
     overflow-y: hidden;
+    width: 1000px;
+    height: 100%;
 }
 
 
-.calendly-flex-prices{
-    background-color: aqua;
-    width: 1100px;
-    height: 1048px;
+
+#how-reserve-container{
+    position: fixed;
+    background-color: rgb(0, 0, 0);
+    bottom: 10%;
+    right: 2%;
+    height: 70px;
     display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    padding: 15px;
+    border: 4px solid white;
+    
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 1000ms ease;
+    z-index: 50;
+}
+
+
+#how-reserve-container h2{
+    font-size: 24px;
+    color: white;
+}
+
+#how-reserve-container i{
+    color: white;
+    font-size: 30px;
+}
+
+#how-reserve-content{
+    position: fixed;
+    width: 500px;
+    height: 0;
+    background-color: rgb(0, 0, 0);
+    bottom: calc(10% + 66px);
+    right: 2%;
+    z-index: 40;
+    transition: all 1s ease, opacity 400ms ease;
+
+    -webkit-box-shadow: -41px 0px 82px -20px rgba(0,0,0,0.75);
+    -moz-box-shadow: -41px 0px 82px -20px rgba(0,0,0,0.75);
+    box-shadow: -41px 0px 82px -20px rgba(0,0,0,0.75);
+}
+
+
+@media (max-width: 1000px){
+    .calendly-flex{
+        padding: 30px 40px;
+    }
+
+    
+}
+
+
+.bar-medium{
+    height: 80px;
+    width: 100%;
+    background-color: gray;
+    display: flex;
+    justify-content: center;
     align-items: center;
 }
 
-.calendly-flex-prices h1{
+.bar-medium{
+    position: relative;
+    color: white;
+    font-size: 26px;
+}
+
+.bar-medium::before{
+    position: absolute;
+    content: '';
+    height: 3px;
+    width: 70%;
+    background-color: white;
+    bottom: 0;
+}
+
+.container-all-prices{
+    width: 80%;
+    height: 700px;
+    margin: auto;
+    background-color: rgb(190, 190, 190);
+    margin-bottom: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 120px;
+}
+
+
+
+
+
+.slider{
+    position: relative;
+    width: 80%;
+    height: 650px;
+    margin: auto;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: gray;
+    z-index: 4;
+    margin-bottom: 40px;
+}
+
+.item{
+    position: absolute;
+    width: 550px;
+    height: 80%;
+    background-color: gray;
+    z-index: 999;
+    transition:  0.5s;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 15px;
+    padding: 20px 40px;
+
+    -webkit-box-shadow: 0px 0px 19px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 0px 19px 0px rgba(0,0,0,0.75);
+    box-shadow: 0px 0px 19px 0px rgba(0,0,0,0.75);
+
+}
+
+
+.arrow{
+    position: absolute;
+    font-size: 150px;
+    color: rgb(255, 255, 255);
+    
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    z-index: 999;
+    transition: all 400ms ease;
+    border-radius: 20px;
+    
+}
+
+.arrow:hover{
+    background-color: rgba(63, 63, 63, 0.486);
+}
+#next{
+    right: 15%;
+    padding-right: 15px;
+}
+
+#prev{
+    left: 15%;
+    padding-left: 15px;
+}
+
+.item h1{
+    color: white;
     font-size: 40px;
 }
 
-.calendly-flex-prices-items{
-    background-color: black;
-    display: grid;
-    grid-template-columns: 300px 300px; /* Tres columnas de 100px cada una */
-    grid-template-rows: 300px 300px 300px; /* Dos filas de 50px cada una */
+.item p{
+    color: white;
+    font-size: 20px;
+    text-align: center;
+    margin-bottom: 20px;
+    width: 85%;
+}
+
+.item img{
+    width: 70%;
+    height: auto;
+    margin-bottom: 30px;
+    border: 2px solid rgb(255, 255, 255);
+
+    -webkit-box-shadow: 0px 0px 60px -25px rgba(255,255,255,1);
+    -moz-box-shadow: 0px 0px 60px -25px rgba(255,255,255,1);
+    box-shadow: 0px 0px 60px -25px rgba(255,255,255,1);
+    
+}
+
+.item h2{
+    color: white;
+    font-size: 45px;
+    width: 60%;
+    height: 80px;
+    border-radius: 20px;
+    border: 2px solid white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    transition: all 500ms ease;
+}
+
+.item a{
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#colorimetria-price{
+    font-size: 30px;
+}
+
+#colorimetria-price:hover{
+    background-color: rgba(63, 63, 63, 0.486);
+    cursor: pointer;
+}
+
+#icon-wpp{
+    font-size: 45px;
+    color: white;
 }
 
 
-.calendly-flex-prices-item{
-    width: 300px;
-    height: 300px;
-    background-color: blue;
-    border: 2px solid red;
-}
-
-.calendly-flex-prices-item-large{
-    height: 500px;
-    width: 300px;
-    background-color: rgb(65, 65, 105);
-    border: 2px solid red;
-}
-
-
-
-#footer{
-    margin-top: 50px;
-}
-
-@media (max-width: 700px){
-    .calendly-inline-widget{
-        width: 100%;
-        height: 1048px;
-        overflow-y: hidden;
-    }
-
-    .calendly-flex{
-        padding: 10px; 
-        justify-content: center;   
-        overflow-y: hidden;
-    }
-}

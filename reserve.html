@@ -79,50 +79,87 @@
 
 <!-----------------------Contenido-------------------->
 
-<div id="all">
-<div class="calendly-flex">
-
-    <article class="calendly-flex-prices">
-    
-        <h1>Precios</h1>
-    
-        <div class="calendly-flex-prices-items">
-            <div class="calendly-flex-prices-item-large">
-
-            </div>
-
-            <div class="calendly-flex-prices-item">
-
-            </div>
-
-            <div class="calendly-flex-prices-item-large">
-
-            </div>
-        
-
-            <div class="calendly-flex-prices-item">
-
-            </div>
-
-            <div class="calendly-flex-prices-item-large">
-
-            </div>
-
-            <div class="calendly-flex-prices-item">
-
-            </div>
-    </div>
-    </article>
-    
-    <section class="calendly">
-        <!-- Calendly inline widget begin -->
-        <div class="calendly-inline-widget" data-url="https://calendly.com/pablod082000/30min?background_color=0f0f0f&text_color=ffffff" style="overflow-y: hidden"></div>
-        <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
-        <!-- Calendly inline widget end -->
-    </section>
-
+<div id="how-reserve-content">
 
 </div>
+
+<div id="how-reserve-container">
+    <h2>¿Como reservar?</h2>
+    <i class="fa-solid fa-chevron-up"></i>
+</div>
+
+<div id="all">
+    <div class="calendly-flex">
+        <section class="calendly">
+            <!-- Calendly inline widget begin -->
+            <div class="calendly-inline-widget" data-url="https://calendly.com/pablod082000/30min"></div>
+            <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
+            <!-- Calendly inline widget end -->
+        </section>
+
+    </div>
+
+
+    <div class="bar-medium">
+        <h1>Precios</h1>
+    </div>
+
+
+
+        <div class="slider">
+            <div class="item">
+                <h1>Corte de Cabello</h1>
+                <img src="img/corte-de-cabello.jpg" alt="">
+                <p>Asesoramiento, corte de cabello y peinado con productos. (Lavado a elección).</p>
+                <h2 class="price">$380</h2>
+            </div>
+
+            <div class="item">
+                <h1>Corte de cabello + Barba</h1>
+                <img src="img/corte-de-cabello-barba.jpg" alt="">
+                <p>Asesoramiento, corte de cabello y barba completa. (Lavado a alección).</p>
+                <h2 class="price">$450</h2>
+            </div>
+
+            <div class="item">
+                <h1>Barba tradicional</h1>
+                <img src="img/barba.jpg" alt="">
+                <p>Afeitado de barba y aplicación de productos según tipo de barba</p>
+                <h2 class="price">$300</h2>
+            </div>
+
+            <div class="item">
+                <h1>Caporale VIP</h1>
+                <img src="img/caporale-vip.jpg" alt="">
+                <p>Asesoramiento exclusivo, corte de cabello, barba completa y mascarilla facial.</p>
+                <h2 class="price">$650</h2>
+            </div>
+
+            <div class="item">
+                <h1>Colorimetría</h1>
+                <img src="img/colorimetria.jpg" alt="">
+                <p>Mechas o completo, el costo dependerá del largo y tipo de cabello</p>
+                <h2 class="price" id="colorimetria-price">Consulta aqui                
+                    <a href="https://api.whatsapp.com/message/IG3542UA2AU5A1?autoload=1&app_absent=0">
+                    <i id="icon-wpp" class="fa-brands fa-whatsapp"></i>
+                </a></h2>
+
+            </div>
+
+            <div class="item">
+                <h1>Black Mask</h1>
+                <img src="img/black-mask.jpg" alt="">
+                <p>Aplicación de mascarilla facial para la limpieza de impurezas y piel muerta</p>
+                <h2 class="price">$350</h2>
+            </div>
+        
+            <i class="fa-solid fa-chevron-left arrow" id="prev"></i>
+            <i class="fa-solid fa-chevron-right arrow" id="next"></i>
+        
+        </div>
+
+
+
 
 
     <footer id="footer">
@@ -180,8 +217,7 @@
 
 
 
-
+    <script src="js/js-reserve.js"></script>
     <script src="js/js-main.js"></script>
-
 </body>
 </html>

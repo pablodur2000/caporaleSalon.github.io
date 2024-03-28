@@ -92,8 +92,15 @@ document.addEventListener("DOMContentLoaded", function() {
     var windowWidth = window.innerWidth;
 
     function checkVisibility(){
-        titleCurse[0].style.opacity = '1';
-        imgCover.style.filter = 'none'
+
+
+        var boundingTitleCurse = titleCurse[0].getBoundingClientRect();
+
+        if (boundingTitleCurse.top >= 0 && boundingTitleCurse.top <= windowHeight){
+            titleCurse[0].style.opacity = '1';
+            imgCover.style.filter = 'none'
+        }        
+
 
         for (let i = 0; i < containersTopIndividual.length; i++){
 
