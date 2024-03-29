@@ -1,3 +1,8 @@
+document.addEventListener("DOMContentLoaded", function() {
+if (window.location.pathname.includes("reserve.html")){
+    document.getElementById("reserve-menu-id").style.display = 'none';
+}
+});
 //--------------------------------Menu-----------------------------
 document.getElementById("icon-menu").addEventListener("click", mostrarMenu);
 document.getElementById("icon-menu-active").addEventListener("click", mostrarMenu);
@@ -49,6 +54,7 @@ window.addEventListener('scroll', function() {
         posicionDeseada = 100;
     }else if (window.location.pathname.includes("reserve.html")){
         posicionDeseada = 200;
+
     }else{
         posicionDeseada = 800;
     }
