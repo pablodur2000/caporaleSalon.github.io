@@ -47,6 +47,8 @@ window.addEventListener('scroll', function() {
 
     if (window.location.pathname.includes("curse.html")){  //window.location.pathname == obtener la url actual
         posicionDeseada = 100;
+    }else if (window.location.pathname.includes("reserve.html")){
+        posicionDeseada = 200;
     }else{
         posicionDeseada = 800;
     }

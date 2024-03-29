@@ -1,5 +1,24 @@
+var smallWidth;
+
+
+document.addEventListener("DOMContentLoaded", function() {
+    setTimeout(function() {
+        if (window.innerWidth <= 530){
+            button.style.transform = 'translateX(-50%)';
+            content.style.transform = 'translateX(-50%)';
+        }else{
+            button.style.transform = 'translateX(0px)';
+            content.style.transform = 'translateX(0px)';
+        }
+        button.style.filter = 'blur(0px)';
+    },1000); // Ajusta el tiempo según la duración de la animación
+});
+
+
+
 
 //-----------------------how reserve-------------------------
+
 let button = document.getElementById("how-reserve-container");
 let content = document.getElementById("how-reserve-content");
 let actives = false;
@@ -9,15 +28,21 @@ button.onclick = function (){
     
     if (actives == false){
         all.style.filter = 'grayscale() blur(4px)';
-        content.style.height = '600px';
+        if (window.innerWidth <= 530){
+            content.style.height = '70vh';
+        }else{
+            content.style.height = '600px';
+        }
+        
         button.style.borderTop = '0';
-        content.style.border = '4px solid white';
+        content.style.border = '4px solid rgb(182, 182, 182)';
         button.style.borderRadius = '0 0 10px 10px'
+        content.style.overflowY = 'auto';
         actives = true;
     }else{
         all.style.filter = 'none';
         content.style.height = '0';
-        button.style.borderTop = '4px solid white';
+        button.style.borderTop = '4px solid rgb(182, 182, 182)';
         content.style.border = '0';
         button.style.borderRadius = '10px'
         actives = false;
@@ -27,7 +52,6 @@ button.onclick = function (){
 
 
 //-------------------------how reserve animate-------------------------
-
 window.addEventListener('scroll', function() {
     var scrollVertical = window.scrollY;
 
@@ -63,7 +87,7 @@ function hideReserve(){
     content.style.border = '0';
     content.style.opacity = '0';
     button.style.transform = 'translateX(400px)';
-    button.style.borderTop = '4px solid white';
+    button.style.borderTop = '4px solid rgb(182, 182, 182)';
     button.style.borderRadius = '10px';
     button.style.filter = 'blur(10px)';
     all.style.filter = 'none';
@@ -71,10 +95,15 @@ function hideReserve(){
 }
 
 function showReserve(){
-    button.style.transform = 'translateX(0px)';
     button.style.filter = 'blur(0px)';
-    content.style.transform = 'translateX(0px)';
     content.style.opacity = '1';
+    if (window.innerWidth <= 530){
+        button.style.transform = 'translateX(-50%)';
+        content.style.transform = 'translateX(-50%)';
+    }else{
+        button.style.transform = 'translateX(0px)';
+        content.style.transform = 'translateX(0px)';
+    }
 }
 
 //-----------------------------slider---------------------
