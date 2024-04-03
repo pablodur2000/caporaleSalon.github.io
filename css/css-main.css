@@ -174,7 +174,8 @@ header{
     align-items: center;
     cursor: pointer;
     padding: 0 15px;
-    transition: color 500ms, background 600ms, transform 800ms;
+    z-index: 10002;
+    transition: color 500ms, background 600ms, transform 800ms, border 200ms ease;
     animation: social-media-container-active 1s alternate forwards;
 }
 

@@ -26,7 +26,7 @@ button[1].onclick = function (){
     if (actives == false){
         all.style.filter = 'grayscale() blur(4px)';
         if (window.innerWidth <= 530){
-            content.style.height = '70vh';
+            content.style.height = '77vh';
         }else{
             content.style.height = '600px';
         }
@@ -51,10 +51,19 @@ button[1].onclick = function (){
 
 //-----------------------view prices-------------------------
 
-button[0].onclick = function (){
-    
-};
+let parrafoPrices = document.getElementById("view-prices-h2");
+document.addEventListener("DOMContentLoaded", function() {
+    function check(){
+        if (window.innerWidth <= 450){
+            parrafoPrices.innerHTML = "Precios";
+        }else{
+            parrafoPrices.innerHTML = "Ver precios";
+        }
+    }
 
+    window.addEventListener('resize', check);
+    check();
+});
 //-------------------------how reserve animate-------------------------
 window.addEventListener('scroll', function() {
     var scrollVertical = window.scrollY;
