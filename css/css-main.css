@@ -109,7 +109,7 @@ header{
     background-color: #ffffff73;
     backdrop-filter: blur(4px) grayscale() brightness(2);
     box-shadow: 0 15px 20px -22px black;  
-    z-index: 10;
+    z-index: 999;
     animation: headerOn 0.5s cubic-bezier(1, 0, 0, 1) forwards;
     
 }
@@ -150,7 +150,7 @@ header{
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    z-index: 10;
+    z-index: 999;
 }
 
 .logo-caporale img{
@@ -361,7 +361,7 @@ header{
     background-size: 200%; /* Ajusta la imagen de fondo para cubrir todo el contenedor */
     background-position: center; /* Centra la imagen de fondo */
     background-position-y: 0;
-    z-index: 100;
+    z-index: 999;
     overflow-y: auto;
     padding-top: 60px; 
 }

@@ -10,46 +10,48 @@
 
 
 
-.calendly-flex{
-    position: relative;
-    margin-top: 80px;
-    padding: 50px 100px;
-    width: 100%;
-    height: calc(100vh - 155px);
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
-    overflow-y: hidden;
-}
-
 .calendly{
-    overflow-y: hidden;
-    display: flex;
-    align-items: center;
-    border-radius: 30px;
-    height: 100%;
+    position: relative;
+    margin: auto;
+    margin-top: 120px;
+    margin-bottom: 150px;
+    width: 1000px;
+    height: calc(100vh - 270px);
+    z-index: 999;
 
     -webkit-box-shadow: 0px 0px 11px 4px rgba(255,255,255,1);
     -moz-box-shadow: 0px 0px 11px 4px rgba(255,255,255,1);
     box-shadow: 0px 0px 11px 4px rgba(255,255,255,1);
-    
 }
+
 
 .calendly-inline-widget{
     overflow-y: hidden;
-    width: 1000px;
+    width: 100%;
     height: 100%;
+}
+
+/*
+.bottom-buttons{
+    position: fixed;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    bottom: 10%;
+
+    width: 100%;
+    background-color: aqua;
+    height: 70px;
+    z-index: 9999;
+    padding: 0 15px;
 }
 
 
 
-#how-reserve-container{
-    position: fixed;
+.bottom-buttons div{
     background-color: rgb(0, 0, 0);
-    bottom: 10%;
-    right: 2%;
-    height: 70px;
+    height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -64,33 +66,22 @@
     transition: all 1000ms ease;
     z-index: 9999;
 }
+*/
 
-
-#how-reserve-container h2{
-    font-size: 24px;
-    color: white;
-    text-wrap: nowrap;
-}
-
-#how-reserve-container i{
-    color: white;
-    font-size: 30px;
-}
 
 #how-reserve-content{
     position: fixed;
     width: 500px;
     height: 0;
     background-color: rgb(0, 0, 0);
-    bottom: calc(10% + 66px);
+    bottom: calc(3% + 71px);
     right: 2%;
-    z-index: 9998;
+    z-index: 9996;
     transition: all 1s ease, opacity 400ms ease;
     overflow: hidden;
     display: flex;
     align-items: center;
     justify-content: center;
-    
 
     -webkit-box-shadow: -41px 0px 82px -20px rgba(0,0,0,0.75);
     -moz-box-shadow: -41px 0px 82px -20px rgba(0,0,0,0.75);
@@ -106,25 +97,81 @@
     line-height: 1.4;
 }
 
+.bottom-buttons{
+    position: fixed;
+    width: 100%;
+    height: 75px;
+    bottom: 3%;
+    z-index: 9997;
+    background-color: #ffffff73;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 3%;
+    gap: 10px;
+
+    transition: all 0.83s ease, background-color 700ms ease;
+}
+
+
+
+
+.bottom-buttons div{
+    background-color: rgb(0, 0, 0);
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    padding: 15px;
+    border: 4px solid rgb(182, 182, 182);
+    
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 1000ms ease, height 200ms ease;
+    z-index: 9999;
+}
+.view-prices{
+
+}
+
+.how-reserve-container{
+
+    overflow: hidden;
+}
+
+
+.button h2{
+    font-size: 24px;
+    color: white;
+    text-wrap: nowrap;
+}
+
+.button i{
+    color: white;
+    font-size: 30px;
+}
+
 span{
     font-size: 22px;
     font-weight: bold;
 }
 
 
+
+@media (max-width: 1180px){
+    .calendly{
+        width: 80%;
+    }
+}
+
 @media (max-width: 1000px){
     .calendly-flex{
-        padding: 0;   
+        padding: 0;
     }
 
     .calendly{
         border-radius: 0;
-    }
-
-    #how-reserve-container{
-        background-color: rgba(65, 65, 65, 0.555);
-        backdrop-filter: blur(4px);
-        
     }
 
     #how-reserve-content{
@@ -135,11 +182,32 @@ span{
 }
 
 @media (max-width: 530px){
+    .calendly{
+        width: 90%;
+    }
+
+    .button h2{
+        font-size: 20px;
+    }
+
+    .button i{
+        font-size: 20px;
+    }
+
     .slider{
         margin-bottom: 0;
     }
 
+    .bottom-buttons{
+        display: flex;
+    }
+
+    .view-prices{
+        display: flex;
+    }
+
     #how-reserve-container{
+        position: block;
         right: auto;
         left: 50%;
         bottom: 5% !important;
@@ -152,7 +220,6 @@ span{
     #how-reserve-container i{
         font-size: 26px;
     }
-
 
     #how-reserve-content{
         right: auto;
@@ -170,9 +237,6 @@ span{
     display: flex;
     justify-content: center;
     align-items: center;
-}
-
-.bar-medium{
     position: relative;
     color: white;
     font-size: 26px;

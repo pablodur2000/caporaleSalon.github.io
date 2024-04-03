@@ -173,20 +173,6 @@ window.addEventListener('scroll', function() {
 
 
 
-//---------------------------smooth service scroll--------------------//
-
-$(document).ready(function(){
-    var ir_a = $(".desplazar");  //Declaramos variable ir_a y le decimos que su valor es la clase .desplazar
-
-    ir_a.click(function(event){   //cuando se haga click a ir_a, se ejecutará la funcion con evento 
-        event.preventDefault();    //previene configuraciones default
-
-        $("body, html").animate({   //.animate es de jquery
-            scrollTop: $(this.hash).offset().top  // 
-        },800);
-
-    })
-});
 
 //----------------------curse-slider-auto------------------------//
 
