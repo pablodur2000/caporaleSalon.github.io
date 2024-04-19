@@ -39,8 +39,18 @@
     font-size: 40px;
     color: white;
     opacity: 0;
+    text-align: center;
+    padding: 0 15px;
+    box-sizing: border-box;
 
     transition: all 1500ms ease;
+}
+
+@media (max-width: 435px){
+    .title-curse{
+        margin: 25px 0;
+        margin-top: 40px;
+    }
 }
 
 
