@@ -175,12 +175,12 @@ header{
     cursor: pointer;
     padding: 0 15px;
     z-index: 10002;
-    transition: color 500ms, background 600ms, transform 800ms, border 200ms ease;
+    transition: color 500ms, background 600ms, transform 700ms, border 200ms ease;
     animation: social-media-container-active 1s alternate forwards;
 }
 
 .reserve-menu-off{
-    animation: social-media-container-off 1s alternate forwards;
+    animation: social-media-container-off 700ms alternate forwards;
 }
 
 .icons-social-media{
@@ -258,7 +258,7 @@ header{
 }
 
 .social-media-container-off{
-    animation: social-media-container-off 2s alternate forwards;
+    animation: social-media-container-off 700ms alternate forwards;
 }
  
 @media (max-width: 666px){        /*Responsive de los iconos redes sociales*/

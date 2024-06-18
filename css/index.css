@@ -15,16 +15,12 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    min-width: 70%;
-    min-height: 70%;
-}
-
-.video-cover{
     height: 100vh;
+    min-width: 100vw;
 }
 
 #video-horizontal video{
-    height: 100vh;
+    min-width: 100vw;
 }
 
 #video-vertical{
@@ -33,22 +29,28 @@
 
 }
 
+@media (min-height: 1080px){
+    #video-horizontal video{
+        min-width: auto;
+        height: 100vh;
+    }
+}
+
 @media (max-width: 1200px){
     #video-vertical{
-        display: flex;
-        justify-content: center;
+        
     }
 
     #video-horizontal{
-        display: none;
+        
     }
 
     .video-cover{
-        top: 20%;
+        
     }
 
     .cover{
-        height: 100vh;
+        
     }
 }
 
@@ -206,23 +208,69 @@
     padding-right: 25px;
 }
 
-.service-content-inter-img{
-
+.service-content-inter-img {
+    position: relative;
     height: 300px;
     width: 550px;
     border-radius: 25px;
     display: flex;
     justify-content: center;
-    opacity: 0;
-    transition: all 1s;
+    overflow: hidden;
+    float: left;
 
     -webkit-box-shadow: 0px 0px 15px 3px rgba(255,255,255,0.5);
     -moz-box-shadow: 0px 0px 15px 3px rgba(255,255,255,0.5);
     box-shadow: 0px 0px 15px 3px rgba(255,255,255,0.5);
 }
 
-.service-content-inter-img img{
+.service-content-inter-img img {
     border-radius: 25px;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out, filter 0.5s ease-in-out;
+}
+
+.img-service-1 {
+    animation: img1Animation 7s infinite; /* Duración total de 7 segundos para incluir la transición */
+}
+
+.img-service-2 {
+    animation: img2Animation 7s infinite; /* Duración total de 7 segundos para incluir la transición */
+}
+
+@keyframes img1Animation {
+    0%,
+    45%,
+    100% {
+        opacity: 1;
+        filter: blur(0);
+        transform: scale(1);
+    }
+    50.5%,
+    95.5% {
+        opacity: 0;
+        filter: blur(20px);
+        transform: scale(1.1);
+    }
+}
+
+@keyframes img2Animation {
+    0%,
+    45%,
+    100% {
+        opacity: 0;
+        filter: blur(20px);
+        transform: scale(1.1);
+    }
+    50.5%,
+    95.5% {
+        opacity: 1;
+        filter: blur(0);
+        transform: scale(1);
+    }
 }
 
 .service-content-inter-text-left{
@@ -345,9 +393,9 @@
     }
 
     .service-content-inter-text{
-        -webkit-box-shadow: 0px -25px 26px -5px rgba(0,0,0,1);
-        -moz-box-shadow: 0px -25px 26px -5px rgba(0,0,0,1);
-        box-shadow: 0px -25px 26px -5px rgba(0,0,0,1);
+        -webkit-box-shadow: 0px -18px 26px -5px rgba(0,0,0,1);
+        -moz-box-shadow: 0px -18px 26px -5px rgba(0,0,0,1);
+        box-shadow: 0px -18px 26px -5px rgba(0,0,0,1);
     }
 }
 

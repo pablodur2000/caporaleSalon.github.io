@@ -109,7 +109,7 @@ document.addEventListener("DOMContentLoaded", function() {
             if (windowWidth < 1200){
                 medida = 0;
             }else{
-                medida = 160;
+                medida = 70;
             }
 
             if (boundingcontainersTopIndividual.top >= 0 && boundingcontainersTopIndividual.top <= windowHeight - medida){
