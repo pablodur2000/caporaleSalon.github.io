@@ -31,6 +31,44 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 //-------------------------------------------------------------------------
 
+
+
+//--------------------coverrrrrrrr-----------------------------
+
+document.addEventListener("DOMContentLoaded", function() {
+    let currentIndex = 0;
+    const slides = document.querySelectorAll('.slides');
+    const totalSlides = slides.length;
+
+    function showSlide(index) {
+        slides.forEach((slide, i) => {
+            if (i === index) {
+                slide.classList.add('actives');
+            } else {
+                setTimeout(function (){  
+                    slide.classList.remove('actives');
+                }, 1000);
+                
+            }
+        });
+    }
+
+    function nextSlide() {
+        currentIndex = (currentIndex + 1) % totalSlides;
+        showSlide(currentIndex);
+    }
+
+    setInterval(nextSlide, 3000); // Cambia la imagen cada 3 segundos
+
+    showSlide(currentIndex); // Muestra la primera imagen al cargar la página
+});
+
+//--------------------fin coverrrrrrrr-----------------------------
+
+
+
+
+
 //-----------------------Service---------------------------
 document.addEventListener("DOMContentLoaded", function() {
     var textLeft = document.querySelectorAll('.service-content-inter-text-left');
