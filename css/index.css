@@ -827,12 +827,12 @@
 
     .container-testimonial{
         min-width: 230px;
-        height: 300px;
+        height: 270px;
     }
 
     .container-testimonial-text p{
         font-family: 'Mukta', sans-serif;
-        font-size: 18px;
+        font-size: 16px;
         line-height: 1.2;
         margin-top: 5px;
     }
@@ -840,6 +840,10 @@
     .container-testimonial-text{
         padding: 30px;
         padding-bottom: 10px;
+    }
+
+    .container-testimonial-text h1{
+        font-size: 20px;
     }
 
     .container-testimonial-img{
@@ -927,7 +931,6 @@
 
 }
 
-
 .bar-flex{
     border-radius: 15px;
     display: flex;
@@ -985,7 +988,15 @@
 }
 
     
- 
+@media (max-width: 640px){
+    .title-bar{
+        font-size: 17px;
+    }
+
+    .container-bar p{
+        font-size: 16px;
+    }
+}
 
 @keyframes bar-content-active {
     from{
