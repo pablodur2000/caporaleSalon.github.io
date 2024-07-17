@@ -539,6 +539,7 @@ header{
 
 
 footer{
+    z-index: 110;
     height: 700px;
     width: 100%;
     background-color: rgb(228, 228, 228);
