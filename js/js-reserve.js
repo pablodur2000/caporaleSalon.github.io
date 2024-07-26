@@ -10,7 +10,7 @@ document.addEventListener("DOMContentLoaded", function() {
             buttonsContainer.style.opacity = '1';
         }
        
-    },1000); // Ajusta el tiempo según la duración de la animación
+    },1000);
 });
 
 
@@ -51,13 +51,13 @@ button[1].onclick = function (){
 
 //-----------------------view prices-------------------------
 
-let parrafoPrices = document.getElementById("view-prices-h2");
+let paragraphPrices = document.getElementById("view-prices-h2");
 document.addEventListener("DOMContentLoaded", function() {
     function check(){
         if (window.innerWidth <= 450){
-            parrafoPrices.innerHTML = "Precios";
+            paragraphPrices.innerHTML = "Precios";
         }else{
-            parrafoPrices.innerHTML = "Ver precios";
+            paragraphPrices.innerHTML = "Ver precios";
         }
     }
 

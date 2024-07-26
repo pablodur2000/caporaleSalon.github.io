@@ -51,7 +51,7 @@ body{
     to {
         filter:blur(5px) grayscale();
         padding-left: 300px;
-        transform: translateX(-300px) /* o el valor deseado */
+        transform: translateX(-300px) 
     }
 }
 
@@ -98,7 +98,7 @@ body{
 
 
 
-/*------------------------------Header - Menú------------------------------*/
+/*------------------------------Header - Menu------------------------------*/
 
 header{
     position: fixed;
@@ -261,7 +261,7 @@ header{
     animation: social-media-container-off 700ms alternate forwards;
 }
  
-@media (max-width: 666px){        /*Responsive de los iconos redes sociales*/
+@media (max-width: 666px){        /*social media icons resposive*/
     .icons-social-media i{
         font-size: 33px;
         width: 60px;
@@ -358,9 +358,9 @@ header{
     right: 0;
     transform: translateX(100%);
     transition: all 1s cubic-bezier(0.215, 0.610, 0.355, 1);
-    background-image: url('../img/background-menu.jpg'); /* Ruta de la imagen de fondo */
-    background-size: 200%; /* Ajusta la imagen de fondo para cubrir todo el contenedor */
-    background-position: center; /* Centra la imagen de fondo */
+    background-image: url('../img/background-menu.jpg'); 
+    background-size: 200%; 
+    background-position: center; 
     background-position-y: 0;
     z-index: 999;
     overflow-y: auto;

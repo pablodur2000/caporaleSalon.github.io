@@ -1,4 +1,4 @@
-/*-------------------------Contenido---------------------------*/
+/*-------------------------Content---------------------------*/
 
 /*-------------------------Cover-------------------------------*/
 .cover{
@@ -14,10 +14,6 @@
     -webkit-box-shadow: 0px 0px 11px 3px rgba(255,255,255,1);
     -moz-box-shadow: 0px 0px 11px 3px rgba(255,255,255,1);
     box-shadow: 0px 0px 11px 3px rgba(255,255,255,1);
-}
-
-.cover img{
-    
 }
 
 .slides {
@@ -105,26 +101,26 @@
 
 @keyframes jump {
     0% {
-      transform: translateY(-140px); /* Sin traslación vertical (posición inicial) */
+      transform: translateY(-140px); 
     }
     50% {
-      transform: translateY(-150px); /* Traslación hacia arriba */
+      transform: translateY(-150px); 
     }
     100% {
-      transform: translateY(-140px); /* Vuelve a la posición inicial */
+      transform: translateY(-140px); 
     }
   }
 
 @media (max-width: 1100px){
     @keyframes jump {
         0% {
-          transform: translateY(-200px); /* Sin traslación vertical (posición inicial) */
+          transform: translateY(-200px); 
         }
         50% {
-          transform: translateY(-210px); /* Traslación hacia arriba */
+          transform: translateY(-210px); 
         }
         100% {
-          transform: translateY(-200x); /* Vuelve a la posición inicial */
+          transform: translateY(-200x);
         }
       }
 }
@@ -170,14 +166,14 @@
 
 .service-content {
     height: 100%;
-    opacity: 1; /* Inicialmente, establece la opacidad en 0 para ocultar el contenido */
-    overflow: hidden; /* Oculta cualquier contenido que sobresalga de los límites del contenedor */
-    transition: max-height 1500ms ease, opacity 1000ms ease; /* Transición para la altura máxima y la opacidad */
+    opacity: 1; /* initially, set the opacity in 0 */
+    overflow: hidden; 
+    transition: max-height 1500ms ease, opacity 1000ms ease; 
   }
   
   .service-content-active {
-    max-height: 2200px; /* Altura máxima deseada para el contenido del servicio */
-    opacity: 1; /* Hace que el contenido sea visible */
+    max-height: 2200px; 
+    opacity: 1; 
   }
 
 .service-content-full{
@@ -249,11 +245,11 @@
 }
 
 .img-service-1 {
-    animation: img1Animation 7s infinite; /* Duración total de 7 segundos para incluir la transición */
+    animation: img1Animation 7s infinite; 
 }
 
 .img-service-2 {
-    animation: img2Animation 7s infinite; /* Duración total de 7 segundos para incluir la transición */
+    animation: img2Animation 7s infinite; 
 }
 
 @keyframes img1Animation {
@@ -569,7 +565,7 @@
 
 /*-----------------------------SLider curse----------------------------*/
 
-.section-curse-slider{   /*Contenedor total del slider*/
+.section-curse-slider{   /* All slider container */
     width: 100%;
     margin: auto;
     overflow: hidden;
@@ -753,7 +749,7 @@
 }
 
 #container-testimonial-1{
-    transform-origin: bottom left; /* Establece el origen de la transformación en la esquina inferior izquierda */
+    transform-origin: bottom left; /* Set the origin of transformation to the bottom left corner */
     transform: rotate(-30deg);
     opacity: 0;
 
@@ -767,7 +763,7 @@
 }
 
 #container-testimonial-3{
-    transform-origin: bottom right; /* Establece el origen de la transformación en la esquina inferior izquierda */
+    transform-origin: bottom right; /* Set the origin of transformation to the bottom rigth corner */
     transform: rotate(30deg);
     opacity: 0;
 
@@ -969,8 +965,8 @@
     overflow: hidden;
     background-color: rgb(82, 82, 82);
     min-height: 100%;
-    max-height: 0px; /* Inicialmente, establece la altura máxima en 0 para ocultar el contenido */
-    opacity: 0; /* Inicialmente, establece la opacidad en 0 para ocultar el contenido */
+    max-height: 0px; 
+    opacity: 0; 
     transition: all 1000ms ease;
 }   
 
@@ -983,8 +979,8 @@
 }
   
 .active-bar {
-    max-height: 400px; /* Altura máxima deseada para el contenido del servicio */
-    opacity: 1; /* Hace que el contenido sea visible */
+    max-height: 400px; 
+    opacity: 1; 
 }
 
     
@@ -1018,94 +1014,4 @@
 }
 
 /*----------------------------------------------------*/
-
-
-
-
-
-
-
-
-/*----Sectrion contacto vesrion A------*/
-
-/*
-.section-contact{
-    width: 70%;
-    margin: auto;
-    height: 70px;
-    background-color: rgb(255, 255, 255);
-    border-radius: 50px;
-    margin: 40px auto;
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    padding: 0 40px;
-
-}
-
-.section-contact p{
-    font-family: 'Mukta', sans-serif;
-    font-size: 22px;
-    font-weight: bold;
-    text-align: justify;
-    padding-right: 30px;
-}
-
-.section-contact i{
-    font-size: 55px;
-    margin: 0 15px;
-}
-
-.contact-social-media{
-    display: flex;
-    width: 200px;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
-    height: 100%;
-}
-
-.contact-social-media a{
-    color: rgb(15,15,15);
-}
-
-.contact-p-small{
-    display: none;
-}
-
-@media (max-width: 1170px){
-    .section-contact p{
-        font-size: 19px;
-
-    }
-}
-
-@media (max-width: 1070px){
-    .section-contact{
-        height: 75px;
-    }
-
-    .contact-p-small{
-        display: block;
-        font-size: 22px !important;
-    }
-
-    .contact-p-large{
-        display: none;
-    }
-}
-
-@media (max-width: 990px){
-    .contact-p-small{
-        display: none;
-        font-size: 20px !important;
-    }
-
-    .contact-social-media{
-        width: 70%;
-    }   
-}
-
-*/
-
 
