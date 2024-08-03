@@ -322,19 +322,19 @@ header{
     animation: moveIcon 2s infinite alternate forwards;
 }
 
-.reserve-menu h1{
+.reserve-menu h2{
     font-size: 25px;
     color: azure;
     font-family: 'Mukta', sans-serif;
     transition: color 500ms;
 }
 
-.reserve-h1-small{
+.reserve-h2-small{
     display: none;
     
 }
 
-.reserve-menu h1:hover{
+.reserve-menu h2:hover{
     color: rgb(15, 15, 15);
 }
 
@@ -499,7 +499,7 @@ header{
         margin-right: 5px;
     }
     
-    .reserve-menu h1{
+    .reserve-menu h2{
         font-size: 20px;
         color: azure;
         font-family: 'Mukta', sans-serif;
@@ -514,11 +514,11 @@ header{
 
 @media (max-width: 500px){
 
-    .reserve-h1-big{
+    .reserve-h2-big{
         display: none;
     }
 
-    .reserve-h1-small{
+    .reserve-h2-small{
         display: block;
         font-size: 18px !important;
     }
@@ -706,8 +706,9 @@ footer{
     transform: translateX(-50%);
 }
 
-.container-footer-data-center h1{
+.container-footer-data-center h2{
     font-family: 'Mukta', sans-serif;
+    font-weight: 900;
 }
 
 .container-redes-footer{
@@ -804,7 +805,7 @@ footer{
         padding-top: 15px;
     }
 
-    .container-footer-data h1{
+    .container-footer-data h2{
         font-size: 45px;
     }
 }

@@ -3,11 +3,28 @@
     transition: all 500ms ease;
     width: 100vw;
     height: 100vh;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    border-radius: 40px;
 }
+
+#all div{
+    border-radius: 40px;
+    height: 85%;
+    margin: 110px 110px 0px 110px;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    
+    -webkit-box-shadow: 0px 0px 12px -1px rgba(255,255,255,1);
+    -moz-box-shadow: 0px 0px 12px -1px rgba(255,255,255,1);
+    box-shadow: 0px 0px 12px -1px rgba(255,255,255,1);
+}
+
 
 #all iframe{
     width: 100%;
     height: 100%;
+    overflow-x: hidden;
 }
 
 #all h1{
@@ -15,470 +32,27 @@
 }
 
 
-
-.calendly{
-    position: relative;
-    margin: auto;
-    margin-top: 120px;
-    margin-bottom: 150px;
-    width: 1000px;
-    height: calc(100vh - 270px);
-    z-index: 999;
-
-    -webkit-box-shadow: 0px 0px 11px 4px rgba(255,255,255,1);
-    -moz-box-shadow: 0px 0px 11px 4px rgba(255,255,255,1);
-    box-shadow: 0px 0px 11px 4px rgba(255,255,255,1);
+footer{
+    margin-top: 60px;
 }
 
-
-.calendly-inline-widget{
-    overflow-y: hidden;
-    width: 100%;
-    height: 100%;
-    background-color: white;
-}
-
-/*
-.bottom-buttons{
-    position: fixed;
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-end;
-    align-items: center;
-    bottom: 10%;
-
-    width: 100%;
-    background-color: aqua;
-    height: 70px;
-    z-index: 9999;
-    padding: 0 15px;
-}
-
-
-
-.bottom-buttons div{
-    background-color: rgb(0, 0, 0);
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
-    padding: 15px;
-    border: 4px solid rgb(182, 182, 182);
-    transform: translateX(350px);
-    filter: blur(10px);
-    
-    border-radius: 10px;
-    cursor: pointer;
-    transition: all 1000ms ease;
-    z-index: 9999;
-}
-*/
-
-
-#how-reserve-content{
-    position: fixed;
-    width: 500px;
-    height: 0;
-    background-color: rgb(0, 0, 0);
-    bottom: calc(3% + 71px);
-    right: 2%;
-    z-index: 9996;
-    transition: all 1s ease, opacity 400ms ease;
-    overflow: hidden;
-    display: flex;
-    align-items: flex-start;
-    justify-content: center;
-
-    -webkit-box-shadow: -41px 0px 82px -20px rgba(0,0,0,0.75);
-    -moz-box-shadow: -41px 0px 82px -20px rgba(0,0,0,0.75);
-    box-shadow: -41px 0px 82px -20px rgba(0,0,0,0.75);
-}
-
-#how-reserve-content p{
-    color: white;
-    width: 80%;
-    font-family: 'Mukta', sans-serif;
-    font-size: 20px;
-    line-height: 1.4;
-    padding-top: 15px;
-    margin-bottom: 15px;
-}
-
-.bottom-buttons{
-    position: fixed;
-    width: 100%;
-    height: 75px;
-    bottom: 3%;
-    z-index: 9997;
-    background-color: #ffffff73;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0px 3%;
-    gap: 10px;
-
-    transition: all 0.83s ease, background-color 700ms ease;
-}
-
-
-
-
-.bottom-buttons div{
-    background-color: rgb(0, 0, 0);
-    height: 60px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
-    padding: 15px;
-    border: 4px solid rgb(182, 182, 182);
-    flex-shrink: 1;
-    overflow: hidden;
-    
-    border-radius: 10px;
-    cursor: pointer;
-    transition: all 1000ms ease, height 200ms ease;
-    z-index: 9999;
-}
-
-.bottom-buttons a{
-    overflow: hidden;
-}
-
-
-.button h2{
-    font-size: 24px;
-    color: white;
-    text-wrap: nowrap;
-}
-
-.button i{
-    color: white;
-    font-size: 30px;
-}
-
-span{
-    font-size: 22px;
-    font-weight: bold;
-}
-
-
-
-@media (max-width: 1180px){
-    .calendly{
-        width: 80%;
+@media (max-width: 1130px){
+    #all div{
+        margin: 110px 60px 0px 60px;
     }
 }
 
-@media (max-width: 1000px){
-    .calendly-flex{
-        padding: 0;
-    }
-
-    .calendly{
-        border-radius: 0;
-    }
-
-}
-
-@media (max-width: 530px){
-    .calendly{
-        width: 90%;
-    }
-
-    .button h2{
-        font-size: 20px;
-    }
-
-    .button i{
-        font-size: 20px;
-    }
-
-    .slider{
-        margin-bottom: 0;
-    }
-
-    .bottom-buttons{
-        display: flex;
-    }
-
-    .view-prices{
-        display: flex;
-    }
-
-    #how-reserve-container{
-        position: block;
-        right: auto;
-        left: 50%;
-        bottom: 5% !important;
-    }
-
-    #how-reserve-container h2{
-        font-size: 20px;
-    }
-
-    #how-reserve-container i{
-        font-size: 22px;
-    }
-
-    #how-reserve-content{
-        width: 90%;
+@media (max-width: 665px){
+    #all div{
+        margin: 110px 30px 0px 30px;
     }
 }
 
-@media (max-width: 450px){
-    .bottom-buttons div{
-        padding: 15px 8px;
-    }  
-}
-
-
-.bar-medium{
-    height: 80px;
-    width: 100%;
-    background-color: rgb(142, 142, 142);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-    color: white;
-    font-size: 26px;
-}
-
-.bar-medium::before{
-    position: absolute;
-    content: '';
-    height: 3px;
-    width: 70%;
-    background-color: white;
-    bottom: 0;
-}
-
-.container-all-prices{
-    width: 80%;
-    height: 700px;
-    margin: auto;
-    background-color: rgb(190, 190, 190);
-    margin-bottom: 80px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 120px;
-}
-
-
-
-
-
-.slider{
-    position: relative;
-    width: 80%;
-    height: 650px;
-    margin: auto;
-    overflow: hidden;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: rgb(142, 142, 142);
-    z-index: 4;
-    margin-bottom: 40px;
-}
-
-.item{
-    position: absolute;
-    width: 550px;
-    height: 80%;
-    background-color: gray;
-    z-index: 999;
-    transition:  0.5s;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-start;
-    gap: 15px;
-    padding: 20px 40px;
-
-    -webkit-box-shadow: 0px 0px 19px 0px rgba(0,0,0,0.75);
-    -moz-box-shadow: 0px 0px 19px 0px rgba(0,0,0,0.75);
-    box-shadow: 0px 0px 19px 0px rgba(0,0,0,0.75);
-
-}
-
-
-.arrow{
-    position: absolute;
-    font-size: 150px;
-    color: rgb(255, 255, 255);
-    
-    top: 50%;
-    transform: translateY(-50%);
-    cursor: pointer;
-    z-index: 999;
-    transition: all 400ms ease;
-    border-radius: 20px;
-    
-}
-
-.arrow:hover{
-    background-color: rgba(63, 63, 63, 0.486);
-}
-#next{
-    right: 15%;
-    padding-right: 15px;
-}
-
-#prev{
-    left: 15%;
-    padding-left: 15px;
-}
-
-.item h1{
-    color: white;
-    font-size: 40px;
-}
-
-.item p{
-    color: white;
-    font-size: 20px;
-    text-align: center;
-    margin-bottom: 20px;
-    width: 85%;
-}
-
-.item img{
-    width: 70%;
-    height: auto;
-    margin-bottom: 30px;
-    border: 2px solid rgb(255, 255, 255);
-
-    -webkit-box-shadow: 0px 0px 60px -25px rgba(255,255,255,1);
-    -moz-box-shadow: 0px 0px 60px -25px rgba(255,255,255,1);
-    box-shadow: 0px 0px 60px -25px rgba(255,255,255,1);
-    
-}
-
-.item h2{
-    color: white;
-    font-size: 45px;
-    width: 60%;
-    height: 80px;
-    border-radius: 20px;
-    border: 2px solid white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 8px;
-    transition: all 500ms ease;
-}
-
-.item a{
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-#colorimetria-price{
-    font-size: 30px;
-}
-
-#colorimetria-price:hover{
-    background-color: rgba(63, 63, 63, 0.486);
-    cursor: pointer;
-}
-
-#icon-wpp{
-    font-size: 45px;
-    color: white;
-}
-
-@media (max-width: 1400px){
-    #next{
-    right: 5%;
-    padding-right: 15px;
-    }
-
-    #prev{
-        left: 5%;
-        padding-left: 15px;
+@media (max-width: 500px){
+    #all div{
+        margin: 110px 0px 0px 0px;
     }
 }
-
-@media (max-width: 1100px){
-    .item{
-        width: 60%;
-        gap: 15px;
-        justify-content: center;
-    }
-
-    .item h1{
-        font-size: 30px;
-        text-align: center;
-        line-height: 1.3;
-    }
-    
-    .item img{
-        width: 90%;
-    }
-
-    .arrow{
-        font-size: 110px;
-    }
-
-    .item h2{
-        width: 80%;
-        height: 70px;
-        gap: 4px;
-    }
-
-}
-
-@media (max-width: 700px){
-    .slider{
-        width: 100%;
-        margin-bottom: 0;
-    }
-
-    .arrow{
-        font-size: 85px;
-        opacity: 1;
-    }    
-
-    .item{
-        width: 80%;
-        padding: 20px 20px;
-    }
-
-    #colorimetria-price{
-        font-size: 24px;
-    }
-}
-
-@media (max-width: 530px){
-    .arrow{
-        transform: translateY(0);
-        font-size: 70px;
-    }    
-
-    #next{
-        padding-right: 0;
-    }
-
-    #prev{
-        padding-left: 0;
-    }
-}
-
-@media (max-width: 350px){
-    .item{
-        gap: 5px;
-        padding: 20px 10px;
-    }
-}
-
-
-
 
 @media (max-width: 385px){
     .logo-caporale img{

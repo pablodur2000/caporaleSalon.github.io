@@ -135,27 +135,25 @@ document.addEventListener("DOMContentLoaded", function() {
 document.querySelectorAll('.service-content-inter-text').forEach(function(element){
     element.addEventListener("click", function (event){
         var text = element.querySelector('.service-content-inter-text-p');
-        var h1 = element.querySelector('.service-content-inter-text-h1');
+        var h2 = element.querySelector('.service-content-inter-text-h2');
 
     if (getComputedStyle(text).display === "none"){
-            h1.style.opacity = "0";
-            setTimeout(function (){
-                h1.style.display = "none";
-                text.style.display = "flex";
-
-                setTimeout(function (){  
-                    text.style.opacity = "1";
-                }, 100);
-
-            }, 500);
+        h2.style.opacity = "0";
+        setTimeout(function (){
+            h2.style.display = "none";
+            text.style.display = "flex";
+            setTimeout(function (){  
+                text.style.opacity = "1";
+            }, 100);
+        }, 500);
         }else{
             text.style.opacity = "0";
             setTimeout(function (){
-                h1.style.display = "block";
+                h2.style.display = "block";
                 text.style.display = "none";
 
                 setTimeout(function (){  
-                    h1.style.opacity = "1";
+                    h2.style.opacity = "1";
                 }, 100);
 
             }, 500);
@@ -172,7 +170,7 @@ var cursorService = document.getElementById("cursor-service");
 window.addEventListener('scroll', function() {
     scrollVertical = window.scrollY;
     var wantedPosition = 500;   
-    var h1_0 = document.getElementById("service-content-inter-text-h1-id0");
+    var h1_0 = document.getElementById("service-content-inter-text-h2-id0");
     var text_0 = document.getElementById("service-content-inter-text-p-id0");
 
     if ((wantedPosition < scrollVertical) && cursorService.style.display !== 'none'){
@@ -283,7 +281,7 @@ for (let i = 0; i < elements.length; i++) {
 }
 
 
-var myElemento = document.querySelectorAll('.section-curse-slider-h1');
+var myElemento = document.querySelectorAll('.section-curse-slider-h2');
 var sliderAll = document.querySelectorAll('.slider-img')
 
 
