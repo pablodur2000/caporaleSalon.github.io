@@ -54,8 +54,3 @@ footer{
     }
 }
 
-@media (max-width: 385px){
-    .logo-caporale img{
-        display: flex;
-    }
-}

@@ -15,7 +15,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
 
-
+/*
 //-----------------------how reserve-------------------------
 
 let all = document.getElementById("all");
@@ -48,6 +48,7 @@ button[1].onclick = function (){
     }
     
 }
+
 
 //-----------------------view prices-------------------------
 
@@ -188,3 +189,4 @@ prev.onclick = function(){
 
 
 
+*/

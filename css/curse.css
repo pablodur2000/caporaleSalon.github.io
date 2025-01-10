@@ -5,19 +5,16 @@
 
 #all h1{
     font-family: 'Mukta', sans-serif;
-    line-height: 1.2;
     color: white;
 }
 
 #all h2{
     font-family: 'Mukta', sans-serif;
-    line-height: 1.2;
     color: white;
 }
 
 #all p{
     font-family: 'Mukta', sans-serif;
-    line-height: 1.2;
     color: white;
 }
 
@@ -44,15 +41,17 @@
     box-sizing: content-box;
     border-bottom: 2px solid white;
     border-top: 2px solid white;
+    line-height: 1.2;
 
     transition: all 4s ease;
 }
 
 @media (max-width: 530px){
     .title-curse{
-        padding: 33px 0px;
+        padding: 25px 0px;
         margin: 15px 0;
         margin-top: 30px;
+        font-size: 40px;
     }
 }
 
@@ -66,6 +65,7 @@
     justify-content: center;
     padding: 40px 100px 100px 100px;
     flex-shrink: 0;
+    line-height: 1.2;
 }
 
 .curse-container-top-img{
@@ -251,6 +251,41 @@
         font-size: 34px;
     }
 
+    #curse-container-top-info-individual-side-right{
+        align-items: center;
+        padding: 15px 10px 15px 10px;
+    }
+
+    #curse-container-top-info-individual-side-left{
+        align-items: center;
+        padding: 15px 10px 15px 10px;
+    }
+
+    #curse-container-top-info-individual-side-left h2{
+        justify-content: center;
+    }
+
+    #curse-container-top-info-individual-side-right h2{
+        justify-content: center;
+    }
+
+    #curse-container-top-info-individual-side-right p{
+        text-align: center;
+    }
+
+    #curse-container-top-info-individual-side-left p{
+        text-align: center;
+    }
+
+    #curse-container-top-info-individual-side-right-h2:before{
+        left: 0;
+    }
+
+    #curse-container-top-info-individual-side-left-h2:before{
+        left: 0;
+    }
+
+
     .curse-container-top-info{
         flex-direction: column;
         width: auto;
@@ -387,6 +422,7 @@
     color: white;
     font-size: 20px;
     opacity: 0;
+    line-height: 1.2;
 
     transition: all 1s ease;
 }

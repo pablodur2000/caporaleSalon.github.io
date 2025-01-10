@@ -495,8 +495,11 @@
 
 #section-ubication-h2-1{
     color: white;
-    font-size: 30px;
+    font-size: 36px;
     line-height: 1.2;
+    min-width: 250px;
+    display: flex;
+    justify-content: center;
 
     border-bottom: 1px solid white;
     border-top: 1px solid white;
