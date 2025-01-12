@@ -122,3 +122,49 @@ $(document).ready(function(){
     })
 });
 
+//---------------------------members modal--------------------//
+$(document).ready(function(){
+    const modal = document.querySelector('#container-members-modal');
+    const modalButton = document.querySelector('#member-modal-close-button');
+    const modalH3 = document.querySelector('#members-modal-container-inter-top-h3');
+    const modalP = document.querySelector('#members-modal-container-inter-bottom-info-p');  
+
+    setTimeout(() => {
+        modal.style.transform = 'translateX(0)';
+    }, 2500);
+
+    setTimeout(() => {
+        setInterval(() => {
+            const bounceAnimation = window.innerWidth > 540 ? 'bounceUp' : 'bounceDown';
+            modal.style.animation = `${bounceAnimation} 0.8s`;; // Brinco rápido (0.8s)
+            setTimeout(() => {
+                modal.style.animation = ''; // Pausa entre los brincos (1.5s total con el intervalo)
+            }, 800); // Duración de la animación
+        }, 1200); // Tiempo total entre ciclos
+    }, 3000); // Empieza después de que el modal aparece
+
+    modalButton.addEventListener('click', () => {
+        modal.style.display = 'none';     
+    });  
+
+    window.addEventListener('resize', () => {
+        checkScreeSize();
+    })
+    
+    const checkScreeSize = () => {
+        const innerWidth = window.innerWidth;
+        if (innerWidth > 540){
+            modalH3.innerHTML = '¡Caporale ahora tiene membresías!';
+            modalP.innerHTML = 'Accede a beneficios exclusivos y transforma tu experiencia en el salón. ¡Unite ahora!';
+        }else if(innerWidth < 540){
+            modalP.innerHTML = 'Accede a beneficios exclusivos ¡Unite ahora!';
+            modalH3.innerHTML = '¡Nuevo! Membresías Caporale';
+        }
+    }
+    
+    checkScreeSize();
+
+})
+
+
+

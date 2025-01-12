@@ -1,0 +1,147 @@
+h1,h2,h3,h4{
+    font-family: 'Mukta', sans-serif;
+    color: white;
+}
+
+p, li{
+    color: white;
+}
+
+#members-info-section{
+    margin: 80px auto 80px auto;
+    padding: 50px 0;
+    max-width: 980px;
+
+}
+
+#title-and-info{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+#title-and-info p{
+    text-align: center;
+    padding-top: 20px;
+    font-size: 18px;
+}
+
+#title-and-info h1{
+    text-align: center;
+    font-size: 40px;
+}
+
+#members-container-and-bottom-button-all{
+    margin-top: 80px;
+    max-width: 980px;
+    display: flex;
+    flex-direction: column;
+}
+
+#members-container-all{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 60px;
+}
+
+.member-container-individual{
+    display: flex;
+    flex-direction: column;
+}
+
+.members-cover{
+    width: 350px;
+    height: 350px;
+    filter: blur(1px);
+    -webkit-box-shadow: 0px 0px 14px -3px rgba(255,255,255,1);
+    -moz-box-shadow: 0px 0px 14px -3px rgba(255,255,255,1);
+    box-shadow: 0px 0px 14px -3px rgba(255,255,255,1);
+}
+
+.member-container-individual h2{
+    text-align: center;
+    font-size: 32px;
+    margin-top: 20px;
+}
+
+.member-container-individual h3{
+    text-align: center;
+    font-size: 26px;
+    margin-top: -8px;
+}
+
+.member-container-individual ul{
+    box-sizing: content-box;
+    max-width: 280px;
+    margin: 20px 20px 0 50px;
+    font-size: 20px;
+}
+
+.buy-member-button-with-mercado-pago{
+    width: 120px;
+    margin: 30px auto 0 auto;
+    background-color: rgb(25, 25, 25);
+    padding: 10px 20px 10px 20px;
+    box-sizing: content-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 10px;
+    -webkit-box-shadow: 0px 0px 14px 0px rgba(255,255,255,1);
+    -moz-box-shadow: 0px 0px 14px 0px rgba(255,255,255,1);
+    box-shadow: 0px 0px 14px 0px rgba(255,255,255,1);
+    cursor: pointer;
+    transition: all 150ms ease-in-out;
+}
+
+.buy-member-button-with-mercado-pago:hover{
+    transform: scale(1.07);
+}
+
+.buy-member-button-with-mercado-pago p{
+    font-size: 24px;
+    font-weight: 800;
+}
+
+.buy-member-button-with-mercado-pago img{
+    width: 100px;
+}
+
+#buy-member-button-with-msg-external{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    max-width: fit-content;
+    margin: auto;
+    margin-top: 50px;
+}
+
+#buy-member-button-with-msg-external i{
+    border-radius: 50%;
+    font-size: 30px;
+    color: rgb(0, 0, 0);
+    background-color: rgba(255, 255, 255, 0.644);
+    width: 50px !important;
+    height: 50px !important;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#buy-member-button-with-msg-internal{
+    width: 330px;
+    font-size: 17px;
+    font-weight: 800;
+    text-align: center;
+    background-color: rgb(25, 25, 25);
+    padding: 14px 17px 14px 17px;
+    border-radius: 10px;
+    -webkit-box-shadow: 0px 0px 14px -3px rgba(255,255,255,1);
+    -moz-box-shadow: 0px 0px 14px -3px rgba(255,255,255,1);
+    box-shadow: 0px 0px 14px -3px rgba(255,255,255,1);
+}

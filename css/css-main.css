@@ -26,6 +26,120 @@ body{
     filter: blur(5px);
 }
 
+/*---------------------modal members-----------------------*/
+
+#container-members-modal{
+    position: fixed;
+    padding: 20px;
+    top: calc(100% - 200px);
+    left: 30px;
+    z-index: 99999999;
+    height: 170px;
+    width: 400px;
+    background-color: rgb(25, 25, 25);
+    border-radius: 7px;
+    color: white;
+    -webkit-box-shadow: 0px 0px 14px -4px rgba(255,255,255,1);
+    -moz-box-shadow: 0px 0px 14px -4px rgba(255,255,255,1);
+    box-shadow: 0px 0px 14px -4px rgba(255,255,255,1);
+    transform: translateX(-500px);
+    transition: all 1s ease;
+}
+
+#container-members-modal p{
+    font-family: sans-serif !important;
+}
+
+#members-modal-container-inter-top{
+    display: flex;
+    justify-content: space-between;
+}
+
+#members-modal-container-inter-top i{
+    font-size: 20px;
+    cursor: pointer;
+}
+
+#members-modal-container-inter-bottom{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 94%;
+    margin: 0 20px;
+}
+
+#members-modal-container-inter-bottom-info{
+    width: 200px;
+}
+
+#view-details{
+    cursor: pointer;
+    width: 130px;
+    margin-left: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+}
+
+#view-details-h3{
+    font-size: 18px;
+}
+
+#members-modal-container-inter-bottom img{
+    width: 40px;
+}
+
+@keyframes bounceUp {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-14px);
+    }
+}
+
+@keyframes bounceDown {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(14px);
+    }
+}
+
+@media (max-width: 540px){
+    #container-members-modal{
+        top: 100px;
+        height: 140px;
+        width: 350px;
+        left: 14px;
+    }
+    
+    #members-modal-container-inter-bottom{
+        margin: 0 0;
+    }
+
+    #members-modal-container-inter-top-h3{
+        font-size: 17px;
+    }
+
+    #view-details-h3{
+        font-size: 19px;
+    }
+
+    #members-modal-container-inter-bottom-info-p{
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 380px){
+    #container-members-modal{
+        width: 330px;
+    }
+}
+
+/*---------------------------------------------------------*/
 .all{
     width: 100%;
     display: flex;
