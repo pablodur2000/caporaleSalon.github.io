@@ -125,17 +125,21 @@ body{
     }
 
     #view-details-h3{
-        font-size: 19px;
+        font-size: 17px;
     }
 
     #members-modal-container-inter-bottom-info-p{
         font-size: 15px;
     }
+
+    #members-modal-container-inter-bottom img{
+        width: 35px;
+    }
 }
 
 @media (max-width: 380px){
     #container-members-modal{
-        width: 330px;
+        width: 310px;
     }
 }
 
