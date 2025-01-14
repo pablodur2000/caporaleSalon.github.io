@@ -68,14 +68,20 @@ body{
     margin: 0 20px;
 }
 
+
+
 #members-modal-container-inter-bottom-info{
     width: 200px;
+}
+
+#members-modal-container-inter-bottom a{
+    margin-left: 20px;
+    color: white;
 }
 
 #view-details{
     cursor: pointer;
     width: 130px;
-    margin-left: 20px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -122,6 +128,10 @@ body{
 
     #members-modal-container-inter-top-h3{
         font-size: 17px;
+    }
+
+    #members-modal-container-inter-bottom a{
+        margin-left: 0px;
     }
 
     #view-details-h3{
@@ -824,6 +834,7 @@ footer{
 
 .container-footer-data p{
     font-family: 'Mukta', sans-serif;
+    color: black;
     
 }
 
@@ -843,6 +854,7 @@ footer{
 .container-footer-data-center h2{
     font-family: 'Mukta', sans-serif;
     font-weight: 900;
+    color: black;
 }
 
 .container-redes-footer{

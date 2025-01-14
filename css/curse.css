@@ -39,8 +39,6 @@
     text-align: center;
     padding: 10px 0px;
     box-sizing: content-box;
-    border-bottom: 2px solid white;
-    border-top: 2px solid white;
     line-height: 1.2;
 
     transition: all 4s ease;
@@ -48,10 +46,11 @@
 
 @media (max-width: 530px){
     .title-curse{
-        padding: 25px 0px;
+        padding: 25px 10px;
         margin: 15px 0;
         margin-top: 30px;
         font-size: 40px;
+        text-align: left;
     }
 }
 
