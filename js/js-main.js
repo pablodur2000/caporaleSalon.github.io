@@ -132,7 +132,7 @@ if(!window.location.href.includes("members.html")){
     
         setTimeout(() => {
             modal.style.transform = 'translateX(0)';
-        }, 2500);
+        }, 1500);
     
         setTimeout(() => {
             setInterval(() => {
