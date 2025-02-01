@@ -121,7 +121,7 @@ p, li{
     margin-top: 50px;
 }
 
-#buy-member-button-with-msg-external i{
+#buy-member-button-with-msg-external i, .ig-friends{
     border-radius: 50%;
     font-size: 30px;
     color: rgb(0, 0, 0);
@@ -180,8 +180,7 @@ p, li{
 
 .friends-company-container-individual{
     display: flex;
-    max-height: 400px;
-    padding: 0 60px;
+    padding: 0 30px;
     margin-top: 50px;
     border-bottom: 0.5px solid rgba(255, 255, 255, 0.594);
     padding-bottom: 40px;
@@ -190,10 +189,11 @@ p, li{
 
 .friends-company-container-individual-left{
     flex: 1;
+    margin: auto;
 }
 
 .friends-company-container-individual-left img{
-    height: 100%;
+    height: auto;
     width: 100%;
     min-height: 320px;
     min-width: 320px;
@@ -204,10 +204,12 @@ p, li{
     display: flex;
     justify-content: center;
     align-items: center;
+    padding-left: 25px;
 }
 
 .friends-company-container-individual-right h3{
     font-size: 34px;
+    line-height: 1.2;
 }
 
 .friends-company-container-individual-right h2{
@@ -215,7 +217,12 @@ p, li{
 }
 
 .friends-company-container-individual-right ul{
+    padding: 0 20px;
+    margin-bottom: 15px;
+}
 
+.friends-company-container-individual-right ul li{
+    margin-top: 6px;
 }
 
 .friends-company-container-individual-right-inter{
@@ -224,7 +231,7 @@ p, li{
 
 @media (max-width: 1030px){
     #members-info-section{
-        padding: 50px 100px;
+        padding: 50px 40px;
     }
 
     .friends-company-container-individual{
@@ -245,6 +252,14 @@ p, li{
     .friends-company-container-individual-right{
         justify-content: flex-end;
     }
+
+    .friends-company-container-individual-right-inter {
+        width: 100%;
+    }
+
+    .friends-company-container-individual-right h3{
+        margin-top: 10px;
+    }
 }
 
 @media (max-width: 820px){
@@ -253,13 +268,17 @@ p, li{
         max-height: fit-content;
     }
 
+    .friends-company-container-individual-left{
+        display: flex;
+        justify-content: center;
+    }
+
     .friends-company-container-individual-left img{
-        width: 350px;
-        height: 350px;
     }
 
     .friends-company-container-individual-right{
         justify-content: center;
+        padding: 0;
     }
 }
 
